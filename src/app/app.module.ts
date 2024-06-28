@@ -7,7 +7,7 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { HomeComponent } from './components/header/home.component';
+import { HomeComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from './material/material.module';
 
@@ -18,7 +18,7 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     FontAwesomeModule,
     MaterialModule,
-    FontAwesomeImportModule
+    FontAwesomeImportModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
