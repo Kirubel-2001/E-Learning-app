@@ -1,0 +1,13 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.navbar-spacer{
+  justify-content: space-between;
+  height: 7%;
+}
+.navbar-address span{
+  font-size: small;
+}
+.navbar-address span fa-icon{
+  margin-left: 2rem;
+  font-size: small;
+}

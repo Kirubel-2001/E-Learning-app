@@ -1,0 +1,17 @@
+.landing-page{
+    background-image: url(./);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .landing-page ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .landing-page li{
+    display: flex;
+  }
+  .landing-page li a{
+    text-decoration: none;
+  }
