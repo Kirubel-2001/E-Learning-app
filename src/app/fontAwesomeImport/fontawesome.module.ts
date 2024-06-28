@@ -7,9 +7,10 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 
 @NgModule({
-  imports: [  ]
+  imports: [ FontAwesomeModule ],
+  exports: [FontAwesomeModule],
 })
-export class FontawesomeModule { 
+export class FontAwesomeImportModule { 
   constructor(library: FaIconLibrary) {
     library.addIcons(faPhone,faLocationDot,faUser,faClock);
   }
