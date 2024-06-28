@@ -1,3 +1,4 @@
+import { FontAwesomeImportModule } from './fontAwesomeImport/fontawesome.module';
 import { NgModule } from '@angular/core';
 import {
   BrowserModule,
@@ -17,6 +18,7 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     FontAwesomeModule,
     MaterialModule,
+    FontAwesomeImportModule
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
