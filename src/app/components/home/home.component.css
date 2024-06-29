@@ -1,17 +1,21 @@
 .landing-page{
-    background-image: url(./);
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/landing-background.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    background-position: center;
+    padding: 20px;
   }
+  
   .landing-page ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 2rem;
     flex-direction: row;
-  }
-  .landing-page li{
-    display: flex;
+    list-style-type: none;
+    margin: 0;
   }
   .landing-page li a{
     text-decoration: none;
+    color: white;
   }

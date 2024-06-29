@@ -1,13 +1,37 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 
-.navbar-spacer{
+.navbar-spacer {
   justify-content: space-between;
   height: 7%;
 }
-.navbar-address span{
+.navbar-address span {
   font-size: small;
 }
-.navbar-address span fa-icon{
+.navbar-address span fa-icon {
   margin-left: 2rem;
   font-size: small;
+}
+.horizontal-line{
+  border-left: 2px solid rgb(207, 204, 204);
+}
+.second-navbar{
+  display: none;
+} 
+@media (max-width: 768px) {
+  .navbar-left,
+  .navbar-right {
+    flex-direction: column;
+  }
+  .navbar-spacer{
+    height: 15%;
+  }
+  .navbar-address span {
+    display: block;
+  }
+  .second-navbar{
+    display: flex;
+    box-shadow: var(--mat-app-elevation-shadow-level-4, none);
+    display: flex;           
+    justify-content: space-between;
+  }
 }
