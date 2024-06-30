@@ -1,14 +1,58 @@
 <app-header></app-header>
 <div class="landing-page">
-<ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">COURSES</a></li>
-      <li><a href="#">ABOUT US</a></li>
-      <li><a href="#">CONTACT US</a></li>
-      <li><a href="#">LIBRARY</a></li>
-      <li><button mat-button>
+  <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">COURSES</a></li>
+    <li><a href="#">ABOUT US</a></li>
+    <li><a href="#">CONTACT US</a></li>
+    <li><a href="#">LIBRARY</a></li>
+    <li>
+      <button mat-button>
         <fa-icon [icon]="['fas', 'magnifying-glass']"></fa-icon>
       </button>
-      </li>
-    </ul>  
-</div>  
+    </li>
+  </ul>
+  <div class="heading">
+    <h3>GOOD GRADE STUDENT MAKES SCHOOLING FUN!</h3>
+    <h1>BE BETTER <br />LEARN BETTER</h1>
+  </div>
+</div>
+<!-- top-courses -->
+<div class="course">
+  <div class="top-courses">
+    <h2>TOP COURSES</h2>
+    <mat-form-field appearance="outline">
+      <mat-label>Release date (Newest First)</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="course-grids">
+    <mat-grid-list cols="4" rowHeight="317.4px" gutterSize="1rem">
+      <mat-grid-tile class="g11">
+        <div class="course-info">
+        <p style="color: gray;">C++</p>
+        <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822);">Auto Draft</p>
+        <hr>
+        <div class="spacer">
+          <div>
+        <fa-icon [icon]="['far', 'clock']" style="padding-right: 2px;"></fa-icon>
+        2 Months</div><span>$3</span>
+      </div>
+      </div>  
+      </mat-grid-tile>
+      <mat-grid-tile class="g12">2oneeno</mat-grid-tile>
+      <mat-grid-tile class="g13">3onenoe</mat-grid-tile>
+      <mat-grid-tile class="g14">4onenoe</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="4" rowHeight="317.4px" gutterSize="1rem">
+      <mat-grid-tile class="g21">1onenoe</mat-grid-tile>
+      <mat-grid-tile class="g22">2oneeno</mat-grid-tile>
+      <mat-grid-tile class="g23">3onenoe</mat-grid-tile>
+      <mat-grid-tile class="g24">4onenoe</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

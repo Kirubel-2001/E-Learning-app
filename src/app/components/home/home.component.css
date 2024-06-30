@@ -1,12 +1,12 @@
+
 .landing-page{
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/landing-background.jpg') ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/landing-background.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 20px;
   }
-  
   .landing-page ul{
     display: flex;
     justify-content: flex-end;
@@ -14,8 +14,86 @@
     flex-direction: row;
     list-style-type: none;
     margin: 0;
+    padding-right: 12rem;
+    padding-top: 3rem;
+
   }
   .landing-page li a{
     text-decoration: none;
     color: white;
+    white-space: nowrap;
+  }
+  .landing-page li button{
+    display: block;
+    bottom: 0.6rem;
+    color: white;
+    border: solid;
+  }
+  /*heading*/
+
+  .heading{
+    color:white;
+    padding-left: 15rem;
+    padding-top: 7rem;
+  }
+  .heading h3{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+  }
+  .heading h1{
+    font-weight: 900;
+    font-size: 6rem;
+    letter-spacing: 5px;
+    line-height: 6rem;
+  }
+  /* top courses */
+.course .top-courses{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 8rem ;
+}
+.course .top-courses h2{
+white-space: nowrap;
+font-weight: 600;
+color: rgb(110, 110, 110);
+}
+.course .top-courses mat-form-field{
+  width: 20rem;
+  height: 0.5rem; 
+}
+.course-grids mat-grid-list {
+  margin: 0 10rem;
+  padding-bottom: 50px;
+}
+.course-grids .g11 {
+  border: 1px solid rgb(224, 223, 223);
+  background-image: url('../../assets/landing-background.jpg');
+  background-size: 305.06px 140.32px;
+  background-repeat: no-repeat;
+}
+.course-grids .g11 .course-info{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 10rem;
+  line-height: 1.5rem;
+}
+.course-grids .g11 .course-info hr{
+  width: 250px;
+}
+.course-grids .g11 .course-info .spacer{
+  display: flex;
+  justify-content: space-between;
+}
+  /*media*/
+  @media (max-width:768px){
+   .landing-page ul{
+    display: none;
+   }
+  }
+  @media (max-width:850px){
+    .landing-page ul{
+      padding-right: 0rem;
+    }
   }

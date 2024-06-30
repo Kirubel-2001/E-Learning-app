@@ -4,6 +4,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { faClock as farClock } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,7 +14,8 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
   exports: [FontAwesomeModule],
 })
 export class FontAwesomeImportModule { 
+ 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faPhone,faLocationDot,faUser,faClock,faBars,faMagnifyingGlass);
+    library.addIcons(faPhone,faLocationDot,faUser,faClock,farClock,faBars,faMagnifyingGlass);
   }
 }

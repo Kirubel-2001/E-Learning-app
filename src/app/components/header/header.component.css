@@ -31,7 +31,6 @@
   .second-navbar{
     display: flex;
     box-shadow: var(--mat-app-elevation-shadow-level-4, none);
-    display: flex;           
     justify-content: space-between;
   }
 }
