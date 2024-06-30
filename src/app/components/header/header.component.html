@@ -1,23 +1,25 @@
 <mat-toolbar class="navbar-spacer" color="primary">
-  <div>
+  <div class="navbar-left">
     <span class="navbar-address">
       <span><fa-icon [icon]="['fas', 'phone']"></fa-icon>&nbsp; +251940291937</span>
       <span>
         <fa-icon [icon]="['fas', 'location-dot']"></fa-icon>&nbsp; Bole Medhanealem,
         Abyssinia Building 3<sup>rd</sup>&nbsp;floor
       </span>
-      <span><fa-icon [icon]="['fas', 'clock']"></fa-icon>
-        &nbsp; Mon - Sat 8.30 - 11.00</span>
+      <span><fa-icon [icon]="['fas', 'clock']"></fa-icon>&nbsp; Mon - Sat 8.30 - 11.00</span>
     </span>
   </div>
-  <div>
-    <button mat-button >
+  <div class="navbar-right">
+    <button mat-button>
       <fa-icon [icon]="['fas', 'user']"></fa-icon>&nbsp; Login
     </button>
-    <span
-      class="horizontal-line"
-      style="border: 1px solid rgb(180, 179, 179)"
-    ></span>
+    <span class="horizontal-line"></span>
     <button mat-button>Register</button>
   </div>
+</mat-toolbar>
+<!-- second navbar -->
+
+<mat-toolbar class="second-navbar" >
+  <span class="spacer"></span>
+    <button mat-button><fa-icon [icon]="['fas', 'bars']"></fa-icon></button>
 </mat-toolbar>
