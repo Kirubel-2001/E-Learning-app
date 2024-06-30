@@ -1,27 +1,27 @@
+import { FontAwesomeImportModule } from './fontAwesomeImport/fontawesome.module';
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { HeaderComponent } from './components/header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-  ],
+  declarations: [AppComponent, HeaderComponent,HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
-    MatIconModule    
+    FontAwesomeModule,
+    MaterialModule,
+    FontAwesomeImportModule,
   ],
-  providers: [
-    provideClientHydration(),
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration(), provideAnimationsAsync()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
