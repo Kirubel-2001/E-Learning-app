@@ -1,4 +1,5 @@
 <app-header></app-header>
+<!-- landing page -->
 <div class="landing-page">
   <ul>
     <li><a href="#">HOME</a></li>
@@ -24,8 +25,8 @@
     <mat-form-field appearance="outline">
       <mat-label>Release date (Newest First)</mat-label>
       <mat-select [(value)]="selectedValue">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{ food.viewValue }}
+        <mat-option *ngFor="let sort of sort" [value]="sort.value">
+          {{ sort.viewValue }}
         </mat-option>
       </mat-select>
     </mat-form-field>
@@ -38,7 +39,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" style="width: 250px;" />
+          <hr style="width: 250px" style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -57,7 +58,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" />
+          <hr style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -76,7 +77,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" />
+          <hr style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -95,7 +96,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" />
+          <hr style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -116,7 +117,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" />
+          <hr style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -135,7 +136,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" />
+          <hr style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -154,7 +155,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" />
+          <hr style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -173,7 +174,7 @@
           <p style="font-weight: 500; color: rgba(0, 0, 0, 0.822)">
             Auto Draft
           </p>
-          <hr style="width: 250px;" />
+          <hr style="width: 250px" />
           <div class="spacer">
             <div>
               <fa-icon
@@ -189,8 +190,7 @@
     </mat-grid-list>
   </div>
 </div>
-<<<<<<< Updated upstream
-=======
+
 <!-- sign up -->
 <div class="sign-up">
   <div>
@@ -227,10 +227,12 @@
 </div>
  </div>
  <!-- Professional staffs -->
+
   <div>
     <h3 style="text-align: center; padding: 4rem 0; font-weight: 600;color: #273044;">Professional staff</h3>
     <hr style="width: 80px; border: none; height: 2px; background-color: #eab830;">
     <p style="text-align: center; padding: 4rem 0;font-size: medium;">A wonderful serenity has taken possession of my entire soul, like these 
+
       sweet mornings <br> of spring which I enjoy with my whole heart.</p>
  <div class="staff-grid">
   <mat-grid-list cols="4" rowHeight="2:1">
@@ -272,4 +274,5 @@
  <button mat-flat-button style="width: 10rem;margin-top: 24rem;">OUR TEACHERS</button>
 </div>
  </div>
->>>>>>> Stashed changes
+ </div>     
+  hi
