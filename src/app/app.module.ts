@@ -12,9 +12,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,HomeComponent, ContactUsComponent],
+  declarations: [AppComponent, HeaderComponent,HomeComponent, ContactUsComponent,FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
