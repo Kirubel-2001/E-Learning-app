@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
+<<<<<<< HEAD
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
@@ -20,7 +21,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     AppRoutingModule,
     FontAwesomeModule,
     MaterialModule,
-    FontAwesomeImportModule
+    FontAwesomeImportModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
