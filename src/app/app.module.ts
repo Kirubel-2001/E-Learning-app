@@ -20,7 +20,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     AppRoutingModule,
     FontAwesomeModule,
     MaterialModule,
-    FontAwesomeImportModule,
+    FontAwesomeImportModule
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
