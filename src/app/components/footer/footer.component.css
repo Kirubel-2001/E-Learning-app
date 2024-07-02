@@ -47,3 +47,18 @@ line-height: 2.5rem;
     display: flex;
     gap: 1rem;
 }
+/* Media */
+@media (max-width:850px){
+    .footer{
+        flex-direction: column;
+        gap: 4rem;
+        justify-content:space-between;
+        width: 100%;
+    }
+    .about-popular{
+        gap: 5rem;
+    }
+    .pages-contact{
+        gap: 6rem;
+    }
+}
