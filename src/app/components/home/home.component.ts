@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   selectedValue: string='';
 
-  foods: Sort[] = [
+  sort: Sort[] = [
     { value: 'Release date (newest First)', viewValue: 'Release date (newest First)' },
     { value: 'Release date (oldest First)', viewValue: 'Release date (oldest First)' },
     { value: 'Overall Rating', viewValue: 'Overall Rating' },

@@ -1,7 +1,7 @@
 
 .landing-page{
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/landing-background.jpg') ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/home/landing-background.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -62,34 +62,114 @@ color: rgb(110, 110, 110);
   width: 20rem;
   height: 0.5rem; 
 }
+
 .course-grids mat-grid-list {
   margin: 0 10rem;
   padding-bottom: 50px;
 }
 .course-grids .g11 {
   border: 1px solid rgb(224, 223, 223);
-  background-image: url('../../assets/landing-background.jpg');
+  background-image: url('../../assets/home/landing-background.jpg');
   background-size: 305.06px 140.32px;
   background-repeat: no-repeat;
+  
 }
 .course-grids .g11 .course-info{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  padding-top: 10rem;
+  padding: 10rem 4rem 0 4rem;
   line-height: 1.5rem;
-}
-.course-grids .g11 .course-info hr{
-  width: 250px;
+  width: 100%;
 }
 .course-grids .g11 .course-info .spacer{
   display: flex;
   justify-content: space-between;
 }
+/* sign UP */
+.sign-up{
+    height: 76%;
+    background-image: url('../../assets/home/sign-up-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: top;
+    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+
+}
+.sign-up-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  padding: 51px 67px 3px;
+  height: 70%;
+}
+.sign-up-form mat-form-field{
+  width: 250px;
+}
+.sign-up-form mat-label{
+  color: gray;
+  font-weight: 250;
+}
+/* Teacher of the month */
+.teacher-of-month{
+  background-image: url('../../assets/home/teacher-of-month.jpg');
+  background-color: lightblue; 
+  background-size: 400px auto;
+  background-position: right top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+  height: 520px;
+}
+.teachers-info{
+  display: flex;
+  flex-direction: column;
+  padding-left: 7rem;
+  color: #002e5b;
+}
+/* Professional staff */
+.staff-grid mat-grid-list{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 4rem;
+}
+.staff-grid mat-grid-list mat-grid-tiles{
+  margin: 0 10rem;
+}
+.s11{
+  background-image: url('../../assets/home/staff-1.jpg');
+  background-size: auto 270px;
+  background-repeat: no-repeat;
+  height: 340px;
+}
+.staff-info{
+  padding-top: 20rem;
+  width: 100%;
+}
   /*media*/
   @media (max-width:768px){
    .landing-page ul{
     display: none;
+   }
+   .heading{
+    padding-left: 3rem;
+    padding-top: 7rem;
+   }
+   .top-courses mat-form-field{
+    margin-left: 4rem;
+   }
+   .sign-up{
+    gap: 0;
+   }
+   .teacher-of-month{
+    background-image: none;
    }
   }
   @media (max-width:850px){
