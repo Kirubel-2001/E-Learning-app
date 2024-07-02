@@ -11,13 +11,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
-<<<<<<< HEAD
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent,HomeComponent, ContactUsComponent],
-=======
-
   imports: [
     BrowserModule,
     AppRoutingModule,
