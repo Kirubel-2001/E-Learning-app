@@ -11,15 +11,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,HomeComponent],
+  declarations: [AppComponent, HeaderComponent,HomeComponent,FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     MaterialModule,
-    FontAwesomeImportModule,
+    FontAwesomeImportModule
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
