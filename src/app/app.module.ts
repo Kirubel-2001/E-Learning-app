@@ -16,6 +16,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent,HomeComponent, ContactUsComponent],
+=======
+
   imports: [
     BrowserModule,
     AppRoutingModule,
