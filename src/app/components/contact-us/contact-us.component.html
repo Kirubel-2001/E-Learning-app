@@ -1,62 +1,82 @@
 <app-header></app-header>
 <div class="contact-info-container">
-    <div class="contact-info">
-      <h4>Contact Info:</h4>
-      <div class="contact-item">
-        <div class="icon">🏠</div>
-        <div class="text">
-          <p>Postal Address:</p>
-          <p class="gen-info">Bole Medhanealem, Abyssinia Building 3rd floor</p>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="icon">📞</div>
-        <div class="text">
-          <p>Phone:</p>
-          <p class="gen-info">+251-116-674192 | 62</p>
-        </div>
-        <div class="icon">💻</div>
-        <div class="text">
-          <p>Skype:</p>
-          <p class="gen-info">creavers</p>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="icon">✉️</div>
-        <div class="text">
-          <p>Email:</p>
-          <p class="gen-info">contact&#64;creavers.com</p>
-        </div>
-        <div class="icon">🌐</div>
-        <div class="text">
-          <p>Web:</p>
-          <p class="gen-info">www.creavers.com</p>
-        </div>
+  <div class="contact-info">
+    <h4>Contact Info:</h4>
+    <div class="contact-item">
+      <div class="icon">🏠</div>
+      <div class="text">
+        <p>Postal Address:</p>
+        <p class="gen-info">Bole Medhanealem, Abyssinia Building 3rd floor</p>
       </div>
     </div>
-    <div class="location-info">
-      <h4>Location Info:</h4>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15763.025823255834!2d38.7906365!3d8.9945437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x34a8a982337dab6b!2sCREAVERS!5e0!3m2!1sam!2set!4v1656674221030!5m2!1sam!2set" width="550" height="266" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+    <div class="contact-item">
+      <div class="icon">📞</div>
+      <div class="text">
+        <p>Phone:</p>
+        <p class="gen-info">+251-116-674192 | 62</p>
+      </div>
+      <div class="icon">💻</div>
+      <div class="text">
+        <p>Skype:</p>
+        <p class="gen-info">creavers</p>
       </div>
     </div>
+    <div class="contact-item">
+      <div class="icon">✉️</div>
+      <div class="text">
+        <p>Email:</p>
+        <p class="gen-info">contact&#64;creavers.com</p>
+      </div>
+      <div class="icon">🌐</div>
+      <div class="text">
+        <p>Web:</p>
+        <p class="gen-info">www.creavers.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="location-info">
+    <h4>Location Info:</h4>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15763.025823255834!2d38.7906365!3d8.9945437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x34a8a982337dab6b!2sCREAVERS!5e0!3m2!1sam!2set!4v1656674221030!5m2!1sam!2set"
+        width="550"
+        height="266"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
 </div>
-    <div class="feedback-section">
-        <h4>Feedback</h4>
-        <form>
-          <div class="form-group">
-            
-            <input type="text" id="name" name="name" placeholder="Your name">
-          </div>
-          <div class="form-group">
-           
-            <input type="email" id="email" name="email" placeholder="Your email" required>
-          </div>
-          <div class="form-group">
-            
-            <textarea id="feedback" name="feedback" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
-      </div>
-  
+<!-- feedback.component.html -->
+<div class="feedback-container">
+  <h2>Feedback</h2>
+  <form>
+    <div class="form-group">
+      <input type="text" placeholder="Your name" class="form-control" />
+      <input
+        type="email"
+        placeholder="Your email"
+        class="form-control"
+        id="email"
+      />
+    </div>
+    <textarea
+      placeholder="Your feedback"
+      class="form-control"
+      id="textarea"
+    ></textarea>
+    <button type="submit" class="submit-button">SUBMIT</button>
+  </form>
+  <div class="social-share">
+    <button class="share-button facebook">Share</button>
+    <button class="share-button twitter">Tweet</button>
+    <button class="share-button pinterest">Share</button>
+    <button class="share-button linkedin">Share</button>
+    <button class="share-button digg">Share</button>
+  </div>
+</div>
+
+<app-footer></app-footer>
