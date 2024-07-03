@@ -1,11 +1,11 @@
 <mat-toolbar class="mat-elevation-z6">
 <div class="second-toolbar">
     <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">COURSES</a></li>
-      <li><a href="#">ABOUT US</a></li>
-      <li><a href="#">CONTACT US</a></li>
-      <li><a href="#">LIBRARY</a></li>
+      <li><a [routerLink]="'/home'">HOME</a></li>
+      <li><a [routerLink]="'/courses'">COURSES</a></li>
+      <li><a [routerLink]="'/courses'">ABOUT US</a></li>
+      <li><a [routerLink]="'/courses'">CONTACT US</a></li>
+      <li><a [routerLink]="'/courses'">LIBRARY</a></li>
       <li>
         <button mat-button>
           <fa-icon [icon]="['fas', 'magnifying-glass']"></fa-icon>

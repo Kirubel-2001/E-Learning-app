@@ -1,0 +1,145 @@
+<app-header></app-header>
+<app-second-header></app-second-header>
+<div class="courses">
+  <div class="top">
+    <h3>Course</h3>
+    <mat-form-field appearance="outline">
+      <mat-label>Search Courses</mat-label>
+      <input matInput type="text" placeholder="" />
+      <button mat-icon-button matSuffix>
+        <fa-icon [icon]="['fas', 'magnifying-glass']"></fa-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Release date (Newest First)</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option *ngFor="let sort of sort" [value]="sort.value">
+          {{ sort.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="bottom">
+    <div class="left">
+      <div class="category">
+        <button mat-fab extended (click)="toggleDisplay1()">
+          <span>Category</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div [hidden]="isDisplay1">
+          <mat-checkbox>Theology</mat-checkbox>
+          <mat-checkbox>Environmental Science</mat-checkbox>
+          <mat-checkbox>Computer Science</mat-checkbox>
+          <mat-checkbox>Art</mat-checkbox>
+          <mat-checkbox>Mathematics</mat-checkbox>
+          <mat-checkbox>Biology</mat-checkbox>
+          <mat-checkbox>Communication</mat-checkbox>
+          <mat-checkbox>Medicine</mat-checkbox>
+          <mat-checkbox>Physics</mat-checkbox>
+          <mat-checkbox>Photography</mat-checkbox>
+          <mat-checkbox>Pharmacy</mat-checkbox>
+          <mat-checkbox>Graphics Designing</mat-checkbox>
+          <mat-checkbox>Psychology</mat-checkbox>
+        </div>
+      </div>
+      <div class="status">
+        <button mat-fab extended (click)="toggleDisplay2()">
+          <span>Status</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div [hidden]="isDisplay2">
+          <mat-checkbox>Featured</mat-checkbox>
+          <mat-checkbox>Hot</mat-checkbox>
+          <mat-checkbox>New</mat-checkbox>
+          <mat-checkbox>Special</mat-checkbox>
+        </div>
+      </div>
+      <div class="level">
+        <button mat-fab extended (click)="toggleDisplay3()">
+          <span>Level</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div [hidden]="isDisplay3">
+          <mat-checkbox>Beginner</mat-checkbox>
+          <mat-checkbox>Intermediate</mat-checkbox>
+          <mat-checkbox>Advanced</mat-checkbox>
+        </div>
+      </div>
+      <div class="rating">
+        <button mat-fab extended (click)="toggleDisplay4()">
+          <span>Rating</span>
+          <fa-icon [icon]= "['fas', 'plus']"></fa-icon>
+        </button>
+        <div [hidden]="isDisplay4">
+          <mat-checkbox>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star-half-stroke']"></fa-icon>
+            4.5 & up</mat-checkbox>
+          <mat-checkbox>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+            4.0 & up</mat-checkbox>
+          <mat-checkbox>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star-half-stroke']"></fa-icon>
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+            3.5 & up</mat-checkbox>
+            <mat-checkbox>
+              <fa-icon [icon]="['fas', 'star']"></fa-icon>
+              <fa-icon [icon]="['fas', 'star']"></fa-icon>
+              <fa-icon [icon]="['fas', 'star']"></fa-icon>
+              <fa-icon [icon]="['far', 'star']"></fa-icon>
+              <fa-icon [icon]="['far', 'star']"></fa-icon>
+              3 & up</mat-checkbox>
+        </div>
+      </div>
+      <div class="instructors">
+        <button mat-fab extended (click)="toggleDisplay5()">
+          <span>Instructors</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div [hidden]="isDisplay5">
+          <mat-checkbox>Beakal Zelealem</mat-checkbox>
+          <mat-checkbox>Yared Ekubay</mat-checkbox>
+          <mat-checkbox>Kirubel Tesfaw</mat-checkbox>
+        </div>
+      </div>
+      <div class="price">
+        <button mat-fab extended (click)="toggleDisplay6()">
+          <span>Price</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div [hidden]="isDisplay6">
+          <mat-checkbox>Free</mat-checkbox>
+          <mat-checkbox>Paid</mat-checkbox>
+          <mat-checkbox>Subscription Only</mat-checkbox>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="featured-courses">
+        <div class="course1">
+          <p>Environmental Science</p>
+          <p>Race and Culture</p>
+          <hr
+          >
+          <div>
+            <fa-icon [icon]="['far', 'clock']"></fa-icon>
+            <span>1 month</span>
+            <p>Free</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
