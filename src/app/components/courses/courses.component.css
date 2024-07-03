@@ -5,3 +5,28 @@
     flex-direction: row;
     justify-content: space-around;
 }
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bottom .left{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.bottom .left .category, div{
+    display: flex;
+    flex-direction: column;
+}
+.bottom .left .btn{
+    width: 100%;
+    border-radius: 0;
+    background-color: white;   
+}
+.bottom .left .btn fa-icon{
+    
+}

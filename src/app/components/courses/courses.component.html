@@ -22,11 +22,11 @@
   <div class="bottom">
     <div class="left">
       <div class="category">
-        <button mat-fab extended (click)="toggleDisplay1()">
-          <span>Category</span>
+        <button mat-fab extended (click)="toggleDisplay1()" class = "btn">
+          <span style="padding-right: 10rem;">Category</span>
           <fa-icon [icon]="['fas', 'plus']"></fa-icon>
         </button>
-        <div [hidden]="isDisplay1">
+        <div *ngIf="!isDisplay1">
           <mat-checkbox>Theology</mat-checkbox>
           <mat-checkbox>Environmental Science</mat-checkbox>
           <mat-checkbox>Computer Science</mat-checkbox>
@@ -43,11 +43,11 @@
         </div>
       </div>
       <div class="status">
-        <button mat-fab extended (click)="toggleDisplay2()">
-          <span>Status</span>
+        <button mat-fab extended (click)="toggleDisplay2()" class = "btn">
+          <span style="padding-right: 11rem;">Status</span>
           <fa-icon [icon]="['fas', 'plus']"></fa-icon>
         </button>
-        <div [hidden]="isDisplay2">
+        <div *ngIf="!isDisplay2">
           <mat-checkbox>Featured</mat-checkbox>
           <mat-checkbox>Hot</mat-checkbox>
           <mat-checkbox>New</mat-checkbox>
@@ -55,22 +55,22 @@
         </div>
       </div>
       <div class="level">
-        <button mat-fab extended (click)="toggleDisplay3()">
-          <span>Level</span>
+        <button mat-fab extended (click)="toggleDisplay3()" class = "btn">
+          <span style="padding-right: 11.5rem;">Level</span>
           <fa-icon [icon]="['fas', 'plus']"></fa-icon>
         </button>
-        <div [hidden]="isDisplay3">
+        <div *ngIf="!isDisplay3">
           <mat-checkbox>Beginner</mat-checkbox>
           <mat-checkbox>Intermediate</mat-checkbox>
           <mat-checkbox>Advanced</mat-checkbox>
         </div>
       </div>
       <div class="rating">
-        <button mat-fab extended (click)="toggleDisplay4()">
-          <span>Rating</span>
+        <button mat-fab extended (click)="toggleDisplay4()" class = "btn">
+          <span style="padding-right: 11rem;">Rating</span>
           <fa-icon [icon]= "['fas', 'plus']"></fa-icon>
         </button>
-        <div [hidden]="isDisplay4">
+        <div *ngIf="!isDisplay4">
           <mat-checkbox>
             <fa-icon [icon]="['fas', 'star']"></fa-icon>
             <fa-icon [icon]="['fas', 'star']"></fa-icon>
@@ -102,26 +102,31 @@
         </div>
       </div>
       <div class="instructors">
-        <button mat-fab extended (click)="toggleDisplay5()">
-          <span>Instructors</span>
+        <button mat-fab extended (click)="toggleDisplay5()" class = "btn">
+          <span style="padding-right: 9.5rem;">Instructor</span>
           <fa-icon [icon]="['fas', 'plus']"></fa-icon>
         </button>
-        <div [hidden]="isDisplay5">
+        <div *ngIf="!isDisplay5">
           <mat-checkbox>Beakal Zelealem</mat-checkbox>
           <mat-checkbox>Yared Ekubay</mat-checkbox>
           <mat-checkbox>Kirubel Tesfaw</mat-checkbox>
         </div>
       </div>
       <div class="price">
-        <button mat-fab extended (click)="toggleDisplay6()">
-          <span>Price</span>
+        <button mat-fab extended (click)="toggleDisplay6()" class = "btn">
+          <span style="padding-right: 11rem;">Price</span>
           <fa-icon [icon]="['fas', 'plus']"></fa-icon>
         </button>
-        <div [hidden]="isDisplay6">
+        <div *ngIf="!isDisplay6">
           <mat-checkbox>Free</mat-checkbox>
           <mat-checkbox>Paid</mat-checkbox>
           <mat-checkbox>Subscription Only</mat-checkbox>
         </div>
+      </div>
+      <div class="show-results">
+        <button mat-raised-button color="primary"  style="margin: 0.5rem 1rem; border-radius: 0;">
+          <span>Show Results</span>
+        </button>
       </div>
     </div>
     <div class="right">
