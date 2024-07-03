@@ -2,15 +2,15 @@
 <app-second-header></app-second-header>
 <div class="courses">
   <div class="top">
-    <h3>Course</h3>
-    <mat-form-field appearance="outline">
+    <h1 style="font-weight: 800;">Course</h1>
+    <mat-form-field appearance="outline" style="height: 2rem;">
       <mat-label>Search Courses</mat-label>
       <input matInput type="text" placeholder="" />
       <button mat-icon-button matSuffix>
         <fa-icon [icon]="['fas', 'magnifying-glass']"></fa-icon>
       </button>
     </mat-form-field>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" style="height: 2rem;">
       <mat-label>Release date (Newest First)</mat-label>
       <mat-select [(value)]="selectedValue">
         <mat-option *ngFor="let sort of sort" [value]="sort.value">
@@ -127,19 +127,35 @@
         <button mat-raised-button color="primary"  style="margin: 0.5rem 1rem; border-radius: 0;">
           <span>Show Results</span>
         </button>
+        <a href="#" style="text-align: center;text-decoration:underline;color: gray;">Reset all</a>
       </div>
     </div>
     <div class="right">
       <div class="featured-courses">
+        <div class="featured-courses-header">
+        <P>FEATURE COURSES</P> 
+        <a href="#" style="color: black;">> Show all</a>
+        </div>
         <div class="course1">
-          <p>Environmental Science</p>
+          <p style="font-size: medium;opacity: .5;">Environmental Science</p>
           <p>Race and Culture</p>
-          <hr
-          >
+          <hr style="color: rgb(254, 254, 254); width: 90%;">
           <div>
-            <fa-icon [icon]="['far', 'clock']"></fa-icon>
-            <span>1 month</span>
-            <p>Free</p>
+            <div style="font-size: smaller;">
+            <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp;
+            1 month</div>
+            <p style="font-weight: 500;">Free</p>
+        </div>
+        </div>
+        <div class="course1">
+          <p style="font-size: medium;opacity: .5;">Environmental Science</p>
+          <p>Race and Culture</p>
+          <hr style="color: rgb(254, 254, 254); width: 90%;">
+          <div>
+            <div style="font-size: smaller;">
+            <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp;
+            1 month</div>
+            <p style="font-weight: 500;">Free</p>
         </div>
         </div>
       </div>
