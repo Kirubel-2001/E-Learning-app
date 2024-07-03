@@ -1,0 +1,133 @@
+.contact-info-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  height: 500px; /* Set a fixed height */
+}
+
+.contact-info,
+.location-info {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.location-info {
+  margin-top: 60px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 92px;
+}
+
+.text p {
+  margin: 0;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+.gen-info {
+  font-weight: lighter;
+}
+
+.feedback-container {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#textarea {
+  width: 98%;
+}
+#email {
+  margin-left: 20px;
+}
+.form-control {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea.form-control {
+  width: 100%;
+  height: 150px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #003366;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.social-share {
+  margin-top: 20px;
+}
+
+.share-button {
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.pinterest {
+  background-color: #bd081c;
+  color: #fff;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.digg {
+  background-color: #000000;
+  color: #fff;
+}
