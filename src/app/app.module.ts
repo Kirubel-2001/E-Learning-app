@@ -14,9 +14,12 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { SecondHeaderComponent } from './components/second-header/second-header.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,HomeComponent, ContactUsComponent,FooterComponent, AboutUsComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ContactUsComponent, AboutUsComponent,FooterComponent, SecondHeaderComponent, CoursesComponent],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,20 @@
+.second-toolbar {
+  display: flex;
+  margin-left: 40rem;
+}
+.second-toolbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+}
+.second-toolbar li a {
+  text-decoration: none;
+  color: rgba(56, 56, 56, 0.932);
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: medium;
+}
+.second-toolbar li button {
+  color: #eab830;
+  border: solid #eab830;
+}
