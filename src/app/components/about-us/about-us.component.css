@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.login, .signup {
+  width: 48%;
+  padding: 20px;
+  background: #fff;
+}
+
+.login {
+  background: #2c57a4;
+  color: #fff;
+}
+
+.signup {
+  background: #f1f3f7;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-group .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-group-double {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group-double .input-group {
+  width: 48%;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me input {
+  margin-right: 5px;
+}
+
+.remember-me label {
+  color: #fff;
+}
+
+.remember-me .lost-password {
+  color: #fff;
+  text-decoration: none;
+}
+
+.signup .remember-me label, .signup .lost-password {
+  color: #333;
+}
+
+.btn {
+  background: #18d26e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #15b058;
+}
+
+.login .btn {
+  background: #18d26e;
+}
+
+.login .btn:hover {
+  background: #15b058;
+}
