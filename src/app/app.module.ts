@@ -13,9 +13,11 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SecondHeaderComponent } from './components/second-header/second-header.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,HomeComponent, ContactUsComponent,FooterComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ContactUsComponent, FooterComponent, SecondHeaderComponent, CoursesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

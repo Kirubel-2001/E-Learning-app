@@ -1,0 +1,311 @@
+<app-header></app-header>
+<app-second-header></app-second-header>
+<div class="courses">
+  <div class="top">
+    <h1 style="font-weight: 800">Course</h1>
+    <mat-form-field appearance="outline" style="height: 2rem; padding-right: 5rem;">
+      <mat-label>Search Courses</mat-label>
+      <input matInput type="text" placeholder="" />
+      <button mat-icon-button matSuffix>
+        <fa-icon [icon]="['fas', 'magnifying-glass']" style="color: blue;"></fa-icon>
+      </button>
+    </mat-form-field>
+    <div style="display: flex;flex-direction: row;">
+    <span style="display: flex;background-color: blue;color: white; width: 30%;height: 3.5rem;justify-content: center;align-items: center;">Sort By:</span>
+    <mat-form-field appearance="outline" style="height: 2rem; width: 17 rem;">
+      <mat-label>Release date (Newest First)</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option *ngFor="let sort of sort" [value]="sort.value">
+          {{ sort.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  </div>
+  <div class="bottom">
+    <div class="left">
+      <div class="category">
+        <button mat-fab extended (click)="toggleDisplay1()" class="btn">
+          <span style="padding-right: 10rem">Category</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div *ngIf="!isDisplay1">
+          <mat-checkbox>Theology</mat-checkbox>
+          <mat-checkbox>Environmental Science</mat-checkbox>
+          <mat-checkbox>Computer Science</mat-checkbox>
+          <mat-checkbox>Art</mat-checkbox>
+          <mat-checkbox>Mathematics</mat-checkbox>
+          <mat-checkbox>Biology</mat-checkbox>
+          <mat-checkbox>Communication</mat-checkbox>
+          <mat-checkbox>Medicine</mat-checkbox>
+          <mat-checkbox>Physics</mat-checkbox>
+          <mat-checkbox>Photography</mat-checkbox>
+          <mat-checkbox>Pharmacy</mat-checkbox>
+          <mat-checkbox>Graphics Designing</mat-checkbox>
+          <mat-checkbox>Psychology</mat-checkbox>
+        </div>
+      </div>
+      <div class="status">
+        <button mat-fab extended (click)="toggleDisplay2()" class="btn">
+          <span style="padding-right: 11rem">Status</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div *ngIf="!isDisplay2">
+          <mat-checkbox>Featured</mat-checkbox>
+          <mat-checkbox>Hot</mat-checkbox>
+          <mat-checkbox>New</mat-checkbox>
+          <mat-checkbox>Special</mat-checkbox>
+        </div>
+      </div>
+      <div class="level">
+        <button mat-fab extended (click)="toggleDisplay3()" class="btn">
+          <span style="padding-right: 11.5rem">Level</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div *ngIf="!isDisplay3">
+          <mat-checkbox>Beginner</mat-checkbox>
+          <mat-checkbox>Intermediate</mat-checkbox>
+          <mat-checkbox>Advanced</mat-checkbox>
+        </div>
+      </div>
+      <div class="rating">
+        <button mat-fab extended (click)="toggleDisplay4()" class="btn">
+          <span style="padding-right: 11rem">Rating</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div *ngIf="!isDisplay4">
+          <mat-checkbox>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star-half-stroke']"></fa-icon>
+            4.5 & up</mat-checkbox
+          >
+          <mat-checkbox>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+            4.0 & up</mat-checkbox
+          >
+          <mat-checkbox>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star-half-stroke']"></fa-icon>
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+            3.5 & up</mat-checkbox
+          >
+          <mat-checkbox>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+            3 & up</mat-checkbox
+          >
+        </div>
+      </div>
+      <div class="instructors">
+        <button mat-fab extended (click)="toggleDisplay5()" class="btn">
+          <span style="padding-right: 9.5rem">Instructor</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div *ngIf="!isDisplay5">
+          <mat-checkbox>Beakal Zelealem</mat-checkbox>
+          <mat-checkbox>Yared Ekubay</mat-checkbox>
+          <mat-checkbox>Kirubel Tesfaw</mat-checkbox>
+        </div>
+      </div>
+      <div class="price">
+        <button mat-fab extended (click)="toggleDisplay6()" class="btn">
+          <span style="padding-right: 11rem">Price</span>
+          <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+        </button>
+        <div *ngIf="!isDisplay6">
+          <mat-checkbox>Free</mat-checkbox>
+          <mat-checkbox>Paid</mat-checkbox>
+          <mat-checkbox>Subscription Only</mat-checkbox>
+        </div>
+      </div>
+      <div class="show-results">
+        <button
+          mat-raised-button
+          color="primary"
+          style="margin: 1rem 1rem; border-radius: 0"
+        >
+          <span>Show Results</span>
+        </button>
+        <a
+          href="#"
+          style="text-align: center; text-decoration: underline; opacity:0.5;padding: 1.5rem 0;color: black;"
+          >Reset all</a
+        >
+      </div>
+    </div>
+    <div class="right">
+      <div class="featured-courses">
+        <div class="featured-courses-header">
+          <P>FEATURE COURSES</P>
+          <a href="#" style="color: black">> Show all</a>
+        </div>
+        <div class="column">
+        <div class="first-row">
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+        </div>
+        <div class="second-row">
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+        </div>
+        <div class="third-row">
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+        </div>
+        <div class="fourth-row">
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+          <div class="course1">
+            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
+            <p>Race and Culture</p>
+            <hr style="color: rgb(254, 254, 254); width: 90%" />
+            <div>
+              <div style="font-size: smaller">
+                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+              </div>
+              <p style="font-weight: 500">Free</p>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex;align-items: center;">
+          <button
+          mat-raised-button
+          color="primary"
+          style="margin: 0.5rem 1rem; border-radius: 0;width: 16%;"
+
+        >
+          <span>LOAD MORE</span>
+        </button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

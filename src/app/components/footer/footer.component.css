@@ -6,6 +6,7 @@
     color: white;
     padding: 4rem 8rem;
     margin-top: 5rem;
+
 }
 .footer a{
     text-decoration: none;
@@ -46,4 +47,19 @@ line-height: 2.5rem;
 .contact div{
     display: flex;
     gap: 1rem;
+}
+/* Media */
+@media (max-width:850px){
+    .footer{
+        flex-direction: column;
+        gap: 4rem;
+        justify-content:space-between;
+        width: 100%;
+    }
+    .about-popular{
+        gap: 5rem;
+    }
+    .pages-contact{
+        gap: 6rem;
+    }
 }
