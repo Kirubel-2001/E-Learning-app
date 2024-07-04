@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 6rem 0 4rem 0;
+  padding-left: 3rem;
+  margin: 4rem 0 4rem 0;
 }
 .bottom {
   display: flex;
@@ -20,6 +21,7 @@
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 10rem;
+  height: 100%;
 }
 .bottom .left .category,
 div {
@@ -39,16 +41,26 @@ div {
   border-top: 3px solid rgb(22, 255, 22);
   display: flex;
   flex-direction: row;
-  gap: 35rem;
+  justify-content: space-between;
   padding: 6px 1rem 0 1rem;
   margin-bottom: 2rem;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.first-row, .second-row, .third-row, .fourth-row{
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
 }
 .right .featured-courses .course1{
     background-image: url('../../assets/home/staff-1.jpg');
     background-size: 100% 130px;
     background-repeat: no-repeat;
-    height: 100%;
-    width: 250px;
+    height: 130px;
+    width: 200px;
     border: 1px solid rgb(22, 255, 22);
     padding: 10rem 2rem 1rem 2rem;
 
