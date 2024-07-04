@@ -92,6 +92,10 @@ textarea.form-control {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: opacity 1s;
+}
+.submit-button:hover{
+  opacity:0.7;
 }
 
 .social-share {
