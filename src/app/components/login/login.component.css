@@ -108,7 +108,10 @@ form {
   height: 25px;
 }
 .lost-password {
-  margin-left: 10%;
+  margin-left: 6%;
+}
+.rem {
+  margin-top: 1px;
 }
 .remember-me input {
   margin-right: 5px;
@@ -145,7 +148,8 @@ form {
   background: #15b058;
 }
 #login-btn {
-  margin-top: -50px;
+  margin-top: -13%;
+  margin-left: 70%;
 }
 
 .login .btn {
