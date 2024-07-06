@@ -1,0 +1,14 @@
+.course {
+  display: flex;
+  gap: 20px;
+}
+.left {
+  flex: 0 0 68%;
+  background-color: lightblue;
+  /* padding: 20px; */
+}
+.right {
+  flex: 0 0 32%;
+  background-color: lightcoral;
+  /* padding: 20px; */
+}

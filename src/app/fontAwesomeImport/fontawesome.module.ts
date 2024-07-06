@@ -16,17 +16,27 @@ import {
   faMagnifyingGlass,
   faStarHalfStroke,
   faMinus,
-  faList
+  faList,
+  faUnlock,
+  faLayerGroup,
+  faUsers,
+  faBullhorn,
+  faStairs,
+  faPlay,
 } from '@fortawesome/free-solid-svg-icons';
 import { faClock as farClock } from '@fortawesome/free-regular-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import {
+  faHeart,
+  faCirclePlay,
+  faFile,
+} from '@fortawesome/free-regular-svg-icons';
 import {
   faFacebook,
   faTwitter,
   faPinterest,
   faLinkedin,
-  faTelegram
+  faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
@@ -56,7 +66,15 @@ export class FontAwesomeImportModule {
       faLinkedin,
       faTelegram,
       faList,
-      faHeart
+      faHeart,
+      faUnlock,
+      faLayerGroup,
+      faFile,
+      faCirclePlay,
+      faUsers,
+      faBullhorn,
+      faStairs,
+      faPlay
     );
   }
 }

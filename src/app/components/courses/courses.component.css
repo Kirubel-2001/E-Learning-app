@@ -45,30 +45,32 @@ div {
   padding: 6px 1rem 0 1rem;
   margin-bottom: 2rem;
 }
-.column{
+.column {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
-.first-row, .second-row, .third-row, .fourth-row{
+.first-row,
+.second-row,
+.third-row,
+.fourth-row {
   display: flex;
   flex-direction: row;
   gap: 4rem;
 }
-.right .featured-courses .course1{
-    background-image: url('../../assets/home/staff-1.jpg');
-    background-size: 100% 130px;
-    background-repeat: no-repeat;
-    height: 130px;
-    width: 200px;
-    border: 1px solid rgb(22, 255, 22);
-    padding: 10rem 2rem 1rem 2rem;
-
+.right .featured-courses .course1 {
+  background-image: url("../../assets/home/staff-1.jpg");
+  background-size: 100% 130px;
+  background-repeat: no-repeat;
+  height: 130px;
+  width: 200px;
+  border: 1px solid rgb(22, 255, 22);
+  padding: 10rem 2rem 1rem 2rem;
 }
-.right .featured-courses .course1 div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.right .featured-courses .course1 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .container {
   position: relative;
@@ -89,21 +91,23 @@ div {
   background-color: white;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
   z-index: 1;
+  pointer-events: none; /*makes the cursor not to go out of containers width*/
 }
-.container:hover .overlay {
+.container:hover .overlay,
+.overlay:hover {
   opacity: 1;
+  pointer-events: all; /*makes the cursor not to go out of containers width*/
 }
-.overlay .overlay-content{
+.overlay .overlay-content {
   display: flex;
-  
 }
-.overlay .overlay-content .icon-spacer{
+.overlay .overlay-content .icon-spacer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding:1rem 0;
+  padding: 1rem 0;
 }
-.overlay .overlay-content .course-name{
+.overlay .overlay-content .course-name {
   font-weight: 600;
   text-decoration: none;
   color: black;
@@ -111,9 +115,8 @@ div {
   text-align: left;
   padding-bottom: 2rem;
   padding-left: 2rem;
-
 }
-.overlay .overlay-content .font-size{
+.overlay .overlay-content .font-size {
   font-weight: 300;
   text-align: left;
   padding: 0 2rem;
@@ -125,7 +128,7 @@ div {
   flex-direction: row;
   margin-left: 10rem;
 }
-.social-share fa-icon{
+.social-share fa-icon {
   padding-right: 1rem;
   font-size: 20px;
 }
