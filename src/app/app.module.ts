@@ -13,6 +13,7 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 import { SecondHeaderComponent } from './components/second-header/second-header.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { SpecificCourseComponent } from './components/courses/specific-course/specific-course.component';
