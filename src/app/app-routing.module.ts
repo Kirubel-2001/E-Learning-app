@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { LoginComponent } from './components/login/login.component';
 import { CoursesComponent } from './components/courses/courses.component';
+import { SpecificCourseComponent } from './components/courses/specific-course/specific-course.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'contactus', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'courses', component: CoursesComponent },
+  { path: 'specific-course', component: SpecificCourseComponent },
+
 ];
 
 @NgModule({
