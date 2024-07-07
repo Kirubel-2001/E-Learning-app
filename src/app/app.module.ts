@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { SecondHeaderComponent } from './components/second-header/second-header.component';
 import { CoursesComponent } from './components/courses/courses.component';
+
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
@@ -30,6 +31,12 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     CoursesComponent,
     AboutUsComponent,
   ],
+
+
+import { SpecificCourseComponent } from './components/courses/specific-course/specific-course.component';
+
+@NgModule({
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ContactUsComponent, FooterComponent, SecondHeaderComponent, LoginComponent,CoursesComponent, SpecificCourseComponent],
 
   imports: [
     BrowserModule,

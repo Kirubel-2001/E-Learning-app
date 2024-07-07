@@ -10,11 +10,11 @@
     </span>
   </div>
   <div class="navbar-right">
-    <button mat-button>
+    <button mat-button [routerLink]="'/login'">
       <fa-icon [icon]="['fas', 'user']"></fa-icon>&nbsp; Login
     </button>
     <span class="horizontal-line"></span>
-    <button mat-button>Register</button>
+    <button mat-button  [routerLink]="'/login'">Register</button>
   </div>
 </mat-toolbar>
 <!-- second navbar -->

@@ -3,24 +3,41 @@
 <div class="courses">
   <div class="top">
     <h1 style="font-weight: 800">Course</h1>
-    <mat-form-field appearance="outline" style="height: 2rem; padding-right: 5rem;">
+    <mat-form-field
+      appearance="outline"
+      style="height: 2rem; padding-right: 5rem"
+    >
       <mat-label>Search Courses</mat-label>
       <input matInput type="text" placeholder="" />
       <button mat-icon-button matSuffix>
-        <fa-icon [icon]="['fas', 'magnifying-glass']" style="color: blue;"></fa-icon>
+        <fa-icon
+          [icon]="['fas', 'magnifying-glass']"
+          style="color: blue"
+        ></fa-icon>
       </button>
     </mat-form-field>
-    <div style="display: flex;flex-direction: row;">
-    <span style="display: flex;background-color: blue;color: white; width: 30%;height: 3.5rem;justify-content: center;align-items: center;">Sort By:</span>
-    <mat-form-field appearance="outline" style="height: 2rem; width: 17 rem;">
-      <mat-label>Release date (Newest First)</mat-label>
-      <mat-select [(value)]="selectedValue">
-        <mat-option *ngFor="let sort of sort" [value]="sort.value">
-          {{ sort.viewValue }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+    <div style="display: flex; flex-direction: row">
+      <span
+        style="
+          display: flex;
+          background-color: blue;
+          color: white;
+          width: 30%;
+          height: 3.5rem;
+          justify-content: center;
+          align-items: center;
+        "
+        >Sort By:</span
+      >
+      <mat-form-field appearance="outline" style="height: 2rem; width: 17 rem">
+        <mat-label>Release date (Newest First)</mat-label>
+        <mat-select [(value)]="selectedValue">
+          <mat-option *ngFor="let sort of sort" [value]="sort.value">
+            {{ sort.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
   </div>
   <div class="bottom">
     <div class="left">
@@ -140,7 +157,13 @@
         </button>
         <a
           href="#"
-          style="text-align: center; text-decoration: underline; opacity:1;padding: 1.5rem 0;color: black;"
+          style="
+            text-align: center;
+            text-decoration: underline;
+            opacity: 0.5;
+            padding: 1.5rem 0;
+            color: black;
+          "
           >Reset all</a
         >
       </div>
@@ -152,160 +175,622 @@
           <a href="#" style="color: black">> Show all</a>
         </div>
         <div class="column">
-        <div class="first-row">
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+          <div class="first-row">
+            <div class="container">
+            <div class="course1">
+              <p style="font-size: medium; opacity: 0.5">
+                Environmental Science
+              </p>
+              <p>Race and Culture</p>
+              <hr style="color: rgb(254, 254, 254); width: 90%" />
+              <div>
+                <div style="font-size: smaller">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                </div>
+                <p style="font-weight: 500">Free</p>
               </div>
-              <p style="font-weight: 500">Free</p>
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <p class="font-size">Yared Ekubay</p>
+                <a href="#" class="course-name">Environmental Science</a>
+                <p class="font-size">Ce cours explorera le baseball à
+                   travers le prisme de la race, du environment
+                    et de la culture. Pour le meilleur et
+                    pour le pire, le baseball a été à l’avan</p>
+                <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                    <div>11 Lectures</div>
+                  </div>
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                  </div>
+                </div>
+                <div style="display: flex;align-items: center;">
+                <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                  REVIEW THIS COURSE
+                </button>
+              </div>
+                <div class="icon-spacer font-size" style="padding-top:1rem;">
+                  <div class="icon-spacer">
+                  <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                     <div>Add to Wishlist</div>
+                  </div>
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                    <div>Free</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+          <div class="container">
+            <div class="course1">
+              <p style="font-size: medium; opacity: 0.5">
+                Environmental Science
+              </p>
+              <p>Race and Culture</p>
+              <hr style="color: rgb(254, 254, 254); width: 90%" />
+              <div>
+                <div style="font-size: smaller">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                </div>
+                <p style="font-weight: 500">Free</p>
               </div>
-              <p style="font-weight: 500">Free</p>
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <p class="font-size">Yared Ekubay</p>
+                <a href="#" class="course-name">Environmental Science</a>
+                <p class="font-size">Ce cours explorera le baseball à
+                   travers le prisme de la race, du environment
+                    et de la culture. Pour le meilleur et
+                    pour le pire, le baseball a été à l’avan</p>
+                <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                    <div>11 Lectures</div>
+                  </div>
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                  </div>
+                </div>
+                <div style="display: flex;align-items: center;">
+                <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                  REVIEW THIS COURSE
+                </button>
+              </div>
+                <div class="icon-spacer font-size" style="padding-top:1rem;">
+                  <div class="icon-spacer">
+                  <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                     <div>Add to Wishlist</div>
+                  </div>
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                    <div>Free</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+          <div class="container">
+            <div class="course1">
+              <p style="font-size: medium; opacity: 0.5">
+                Environmental Science
+              </p>
+              <p>Race and Culture</p>
+              <hr style="color: rgb(254, 254, 254); width: 90%" />
+              <div>
+                <div style="font-size: smaller">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                </div>
+                <p style="font-weight: 500">Free</p>
               </div>
-              <p style="font-weight: 500">Free</p>
             </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <p class="font-size">Yared Ekubay</p>
+                <a href="#" class="course-name">Environmental Science</a>
+                <p class="font-size">Ce cours explorera le baseball à
+                   travers le prisme de la race, du environment
+                    et de la culture. Pour le meilleur et
+                    pour le pire, le baseball a été à l’avan</p>
+                <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                    <div>11 Lectures</div>
+                  </div>
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                  </div>
+                </div>
+                <div style="display: flex;align-items: center;">
+                <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                  REVIEW THIS COURSE
+                </button>
+              </div>
+                <div class="icon-spacer font-size" style="padding-top:1rem;">
+                  <div class="icon-spacer">
+                  <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                     <div>Add to Wishlist</div>
+                  </div>
+                  <div class="icon-spacer">
+                    <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                    <div>Free</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="second-row">
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="third-row">
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fourth-row">
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="course1">
+                <p style="font-size: medium; opacity: 0.5">
+                  Environmental Science
+                </p>
+                <p>Race and Culture</p>
+                <hr style="color: rgb(254, 254, 254); width: 90%" />
+                <div>
+                  <div style="font-size: smaller">
+                    <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
+                  </div>
+                  <p style="font-weight: 500">Free</p>
+                </div>
+              </div>
+              <div class="overlay">
+                <div class="overlay-content">
+                  <p class="font-size">Yared Ekubay</p>
+                  <a href="#" class="course-name">Environmental Science</a>
+                  <p class="font-size">Ce cours explorera le baseball à
+                     travers le prisme de la race, du environment
+                      et de la culture. Pour le meilleur et
+                      pour le pire, le baseball a été à l’avan</p>
+                  <div class="icon-spacer font-size" style="padding-bottom: 1rem;">
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'list']"></fa-icon>&nbsp; 
+                      <div>11 Lectures</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; <div>1 month</div>
+                    </div>
+                  </div>
+                  <div style="display: flex;align-items: center;">
+                  <button mat-raised-button [routerLink]="'/specific-course'" color="primary" style="border-radius: 0; width: 55%;">
+                    REVIEW THIS COURSE
+                  </button>
+                </div>
+                  <div class="icon-spacer font-size" style="padding-top:1rem;">
+                    <div class="icon-spacer">
+                    <a href="#"><fa-icon [icon]="['far', 'heart']" style="color: red;"></fa-icon></a> &nbsp;
+                       <div>Add to Wishlist</div>
+                    </div>
+                    <div class="icon-spacer">
+                      <fa-icon [icon]="['fas', 'unlock']"></fa-icon>&nbsp; 
+                      <div>Free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center">
+            <button
+              mat-raised-button
+              color="primary"
+              style="margin: 0.5rem 1rem; border-radius: 0; width: 16%"
+            >
+              <span>LOAD MORE</span>
+            </button>
           </div>
         </div>
-        <div class="second-row">
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-        </div>
-        <div class="third-row">
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-        </div>
-        <div class="fourth-row">
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-          <div class="course1">
-            <p style="font-size: medium; opacity: 0.5">Environmental Science</p>
-            <p>Race and Culture</p>
-            <hr style="color: rgb(254, 254, 254); width: 90%" />
-            <div>
-              <div style="font-size: smaller">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>&nbsp; 1 month
-              </div>
-              <p style="font-weight: 500">Free</p>
-            </div>
-          </div>
-        </div>
-        <div style="display: flex;align-items: center;">
-          <button
-          mat-raised-button
-          color="primary"
-          style="margin: 0.5rem 1rem; border-radius: 0;width: 16%;"
-
-        >
-          <span>LOAD MORE</span>
-        </button>
-        </div>
-      </div>
       </div>
     </div>
   </div>
+ <!-- Social share -->
+ <div class="social-share">
+  <button class="share-button facebook"><fa-icon [icon]="['fab', 'facebook']"></fa-icon>Share</button>
+  <button class="share-button twitter"><fa-icon [icon]="['fab', 'twitter']"></fa-icon>Tweet</button>
+  <button class="share-button pinterest"><fa-icon [icon]="['fab', 'pinterest']"></fa-icon>Share</button>
+  <button class="share-button linkedin"><fa-icon [icon]="['fab', 'linkedin']"></fa-icon>Share</button>
+  <button class="share-button telegram"><fa-icon [icon]="['fab', 'telegram']"></fa-icon>Share</button>
 </div>
-
+</div>
 <app-footer></app-footer>
