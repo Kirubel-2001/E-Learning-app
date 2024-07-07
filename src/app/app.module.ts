@@ -19,7 +19,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { SpecificCourseComponent } from './components/courses/specific-course/specific-course.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, ContactUsComponent, FooterComponent, SecondHeaderComponent, CoursesComponent, SpecificCourseComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ContactUsComponent, FooterComponent, SecondHeaderComponent, LoginComponent,CoursesComponent, SpecificCourseComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
