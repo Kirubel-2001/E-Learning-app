@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { SecondHeaderComponent } from './components/second-header/second-header.component';
 import { CoursesComponent } from './components/courses/courses.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CoursesComponent } from './components/courses/courses.component';
     FooterComponent,
     SecondHeaderComponent,
     CoursesComponent,
+    AboutUsComponent,
   ],
 
   imports: [

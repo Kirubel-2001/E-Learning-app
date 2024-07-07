@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+}
+
+.logo {
+  background-image: url("../../assets/home/creavers.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  width: 60%;
+  height: 80px;
+  justify-content: space-between;
+}
+#name1 {
+  background-color: #ccc;
+}
+#email1 {
+  background-color: #ccc;
+}
+input,
+textarea {
+  margin: 19px;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+}
+textarea::placeholder {
+  padding-left: 20px;
+}
+input::placeholder {
+  padding-left: 20px;
+}
+
+input {
+  width: 48%;
+}
+#txtarea {
+  width: 57%;
+}
+
+button {
+  padding: 10px;
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0055a5;
+}
