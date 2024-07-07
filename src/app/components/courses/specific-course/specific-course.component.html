@@ -1,150 +1,210 @@
+<app-header></app-header>
+<app-second-header></app-second-header>
 <div class="course">
   <div class="left">
     <div class="right-header">
-      <h1>Environmental Science</h1>
+      <h1 style="font-weight: 500">Environmental Science</h1>
       <div class="course-description">
         <div class="teacher">
           <p class="small-opacity">Teacher</p>
           <p>Yared Ekubay</p>
         </div>
-        <div class="Category">
+        <div class="category">
           <fa-icon [icon]="['fas', 'layer-group']"></fa-icon>
           <div>
             <p class="small-opacity">Category</p>
-            <p>Science Environmental</p>
+            <p>SCIENCE ENVIRONMENTAL</p>
           </div>
         </div>
       </div>
-      <div class="toggles">
-        <mat-button-toggle-group
-          #group="matButtonToggleGroup"
-          (change)="showContent(group.value)"
-          aria-label="Toggle content"
-        >
-          <mat-button-toggle value="description">Description</mat-button-toggle>
-          <mat-button-toggle value="curriculum">Curriculum</mat-button-toggle>
-          <mat-button-toggle value="reviews">Reviews</mat-button-toggle>
-        </mat-button-toggle-group>
-      </div>
-    </div>
-    <div class="description-content">
-      <div *ngIf="selectedContent === 'description'">
-        <mat-card>
-          <p>
-            Ce cours explorera le baseball à travers le prisme de la race, du
-            sexe et de la culture. Pour le meilleur et pour le pire, le baseball
-            a été à l’avant-garde de la façon dont les États-Unis ont traité ces
-            problèmes. Le baseball ouvre-t-il la voie à la déségrégation
-            nie-t-il que le sport était à l’avant-garde de la ségrégation avec
-            ses Gentlemen’s Agreements ? Quel est l’héritage historique du
-            baseball offrant des opportunités aux femmes en temps de guerre,
-            contrairement aux autres ligues sportives professionnelles
-            nord-américaines ? Ce sont quelques-unes des idées que ce cours
-            explorera car il montre les vertus et les défauts du baseball.
-          </p>
-          <h2>Course appendices</h2>
-          <ul>
-            <li>
-              Comprenez comment le baseball éclaire l’histoire des relations
-              raciales.
-            </li>
-            <li>
-              Analysez les défis auxquels sont confrontées les femmes dans le
-              sport et en Amérique.
-            </li>
-            <li>
-              Illuminez la façon dont le baseball reflète la culture américaine.
-            </li>
-          </ul>
-        </mat-card>
-      </div>
-    </div>
-    <div class="curriculum-content">
-      <div *ngIf="selectedContent === 'curriculum'">
-        <mat-card class="chapter">
-          <h2>Chapter one: Water Sanitation</h2>
-          <div>
-            <div class="list-left">
-              <p>1</p>
-              <fa-icon [icon]="['far', 'file']"></fa-icon>
-              <p>Introduction</p>
+      <mat-tab-group>
+        <mat-tab label="Description">
+          <div class="description-content">
+            <p>
+              Ce cours explorera le baseball à travers le prisme de la race, du
+              sexe et de la culture. Pour le meilleur et pour le pire, le
+              baseball a été à l’avant-garde de la façon dont les États-Unis ont
+              traité ces problèmes. Le baseball ouvre-t-il la voie à la
+              déségrégation nie-t-il que le sport était à l’avant-garde de la
+              ségrégation avec ses Gentlemen’s Agreements ? Quel est l’héritage
+              historique du baseball offrant des opportunités aux femmes en
+              temps de guerre, contrairement aux autres ligues sportives
+              professionnelles nord-américaines ? Ce sont quelques-unes des
+              idées que ce cours explorera car il montre les vertus et les
+              défauts du baseball.
+            </p>
+            <h6><b>Course appendices</b></h6>
+            <hr />
+            <ul>
+              <li>
+                Comprenez comment le baseball éclaire l’histoire des relations
+                raciales.
+              </li>
+              <li>
+                Analysez les défis auxquels sont confrontées les femmes dans le
+                sport et en Amérique.
+              </li>
+              <li>
+                minez la façon dont le baseball reflète la culture américaine.
+              </li>
+              <li>
+                Iinez la façon dont le baseball reflète la culture américaine.
+              </li>
+              <li>
+                Iuminez la façon dont le baseball reflète la culture américaine.
+              </li>
+            </ul>
+          </div>
+        </mat-tab>
+        <mat-tab label="Curriculum">
+          <div class="curriculum-content">
+            <div class="chapter">
+              <h6>Chapter 1: Water Sanitation</h6>
+              <div class="list">
+                <div class="list-left">
+                  <p>1</p>
+                  <fa-icon class="file" [icon]="['far', 'file']"></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>30:00 min</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="list-left">
+                  <p>2</p>
+                  <fa-icon
+                    class="play"
+                    [icon]="['far', 'circle-play']"
+                  ></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>10:00 min</p>
+                  <button mat-raised-button>Preview</button>
+                </div>
+              </div>
+              <div class="list">
+                <div class="list-left">
+                  <p>3</p>
+                  <fa-icon
+                    class="play"
+                    [icon]="['far', 'circle-play']"
+                  ></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>30:00 min</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="list-left">
+                  <p>4</p>
+                  <fa-icon
+                    class="play"
+                    [icon]="['far', 'circle-play']"
+                  ></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>30:00 min</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="list-left">
+                  <p>5</p>
+                  <fa-icon
+                    class="play"
+                    [icon]="['far', 'circle-play']"
+                  ></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>30:00 min</p>
+                </div>
+              </div>
             </div>
-            <div class="list-right">
-              <fa-icon [icon]="['far', 'clock']"></fa-icon>
-              <p>30:00 min</p>
+            <div class="chapter">
+              <h6>Chapter 2: Water Tunnel</h6>
+              <div class="list">
+                <div class="list-left">
+                  <p>1</p>
+                  <fa-icon class="file" [icon]="['far', 'file']"></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>30:00 min</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="list-left">
+                  <p>2</p>
+                  <fa-icon
+                    class="play"
+                    [icon]="['far', 'circle-play']"
+                  ></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>10:00 min</p>
+                  <button mat-raised-button>Preview</button>
+                </div>
+              </div>
+              <div class="list">
+                <div class="list-left">
+                  <p>3</p>
+                  <fa-icon
+                    class="play"
+                    [icon]="['far', 'circle-play']"
+                  ></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>30:00 min</p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="list-left">
+                  <p>4</p>
+                  <fa-icon
+                    class="play"
+                    [icon]="['far', 'circle-play']"
+                  ></fa-icon>
+                  <p>Introduction</p>
+                </div>
+                <div class="list-right">
+                  <fa-icon [icon]="['far', 'clock']"></fa-icon>
+                  <p>30:00 min</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
+        </mat-tab>
+        <mat-tab label="Reviews">
+          <div class="reviews-content">
             <div>
-              <div class="list-left">
-                <p>2</p>
-                <fa-icon [icon]="['far', 'circle-play']"></fa-icon>
-                <p>Introduction</p>
-              </div>
-              <div class="list-right">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>
-                <p>10:00 min</p>
-                <button mat-raised-button>Preview</button>
-              </div>
+              <h6>Be the first to add a review.</h6>
+              <p>Please, <a href="#">login </a>to leave a review.</p>
             </div>
           </div>
-          <div>
-            <div>
-              <div class="list-left">
-                <p>3</p>
-                <fa-icon [icon]="['far', 'circle-play']"></fa-icon>
-                <p>Introduction</p>
-              </div>
-              <div class="list-right">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>
-                <p>30:00 min</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div class="list-left">
-                <p>4</p>
-                <fa-icon [icon]="['far', 'circle-play']"></fa-icon>
-                <p>Introduction</p>
-              </div>
-              <div class="list-right">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>
-                <p>30:00 min</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div class="list-left">
-                <p>5</p>
-                <fa-icon [icon]="['far', 'circle-play']"></fa-icon>
-                <p>Introduction</p>
-              </div>
-              <div class="list-right">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>
-                <p>30:00 min</p>
-              </div>
-            </div>
-          </div>
-        </mat-card>
-      </div>
-    </div>
-    <div class="reviews-content">
-      <div *ngIf="selectedContent === 'reviews'">
-        <mat-card>
-          <h6>Be the first to add a review.</h6>
-          <p>Please, <a href="#">login </a>to leave a review.</p>
-        </mat-card>
-      </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
   </div>
   <div class="right">
-    <div class="wish-list">
+    <div class="wishlist">
       <fa-icon [icon]="['far', 'heart']"></fa-icon>
       <p>Add to wishlist</p>
     </div>
-    <button mat-raised-button>GET COURSE</button>
+    <button mat-raised-button class="get-course-btn">GET COURSE</button>
     <div class="course-info">
       <div>
         <p>Enrolled: <b>2 students</b></p>
@@ -152,74 +212,89 @@
       </div>
       <hr />
       <div>
-        <p>Enrolled: <b>2 students</b></p>
+        <p>Duration: <b>1 month</b></p>
         <fa-icon [icon]="['fas', 'clock']"></fa-icon>
       </div>
       <hr />
       <div>
-        <p>Enrolled: <b>2 students</b></p>
+        <p>Lectures: <b>11</b></p>
         <fa-icon [icon]="['fas', 'bullhorn']"></fa-icon>
       </div>
       <hr />
       <div>
-        <p>Enrolled: <b>2 students</b></p>
+        <p>Video: <b>5:00 min</b></p>
         <fa-icon [icon]="['fas', 'play']"></fa-icon>
       </div>
       <hr />
       <div>
-        <p>Enrolled: <b>2 students</b></p>
+        <p>Level: <b>Beginner</b></p>
         <fa-icon [icon]="['fas', 'stairs']"></fa-icon>
       </div>
-      <hr />
     </div>
-    <div class="suggestion">
-      <div class="suggestion-1">
-        <a href="#">HTML</a>
-        <button mat-raised-button>Free</button>
-        <p class="small-opacity">BY BEAKAL ZELEALEM</p>
-      </div>
-      <div class="suggestion-2">
-        <a href="#">C++</a>
-        <button mat-raised-button>Free</button>
-        <p class="small-opacity">BY YARED EKUBAY</p>
-      </div>
-      <div class="suggestion-3">
-        <a href="#">JavaScript</a>
-        <button mat-raised-button>Free</button>
-        <p class="small-opacity">BY KIRUBEL TESFAW</p>
+    <mat-card class="suggestion">
+      <mat-card-header>
+        <div mat-card-avatar class="image"></div>
+        <mat-card-title>HTML</mat-card-title>
+        <mat-card-subtitle class="small-opacity"
+          >BY BEAKAL ZELEALEM</mat-card-subtitle
+        >
+      </mat-card-header>
+      <button mat-raised-button>Free</button>
+      <mat-card-header>
+        <div mat-card-avatar class="image"></div>
+        <mat-card-title>HTML</mat-card-title>
+        <mat-card-subtitle class="small-opacity"
+          >BY BEAKAL ZELEALEM</mat-card-subtitle
+        >
+      </mat-card-header>
+      <button mat-raised-button>Free</button>
+      <mat-card-header>
+        <div mat-card-avatar class="image"></div>
+        <mat-card-title>HTML</mat-card-title>
+        <mat-card-subtitle class="small-opacity"
+          >BY BEAKAL ZELEALEM</mat-card-subtitle
+        >
+      </mat-card-header>
+      <button mat-raised-button>Free</button>
+    </mat-card>
+    <hr />
+    <div class="working-hours">
+      <b>Working hours</b>
+      <div>
+        <p>Monday</p>
+        <p>9:30 am - 6:00 pm</p>
       </div>
       <hr />
-      <div class="working-hours">
-        <b>Working hours</b>
-        <div>
-          <p>Monday</p>
-          <p>9:30 am - 6:00 pm</p>
-        </div>
-        <div>
-          <p>Tuesday</p>
-          <p>9:30 am - 6:00 pm</p>
-        </div>
-        <div>
-          <p>Wednesday</p>
-          <p>9:30 am - 6:00 pm</p>
-        </div>
-        <div>
-          <p>Thursday</p>
-          <p>9:30 am - 6:00 pm</p>
-        </div>
-        <div>
-          <p>Friday</p>
-          <p>9:30 am - 6:00 pm</p>
-        </div>
-        <div>
-          <p>Saturday</p>
-          <p>Closed</p>
-        </div>
-        <div>
-          <p>Sunday</p>
-          <p>Closed</p>
-        </div>
+      <div>
+        <p>Tuesday</p>
+        <p>9:30 am - 6:00 pm</p>
+      </div>
+      <hr />
+      <div>
+        <p>Wednesday</p>
+        <p>9:30 am - 6:00 pm</p>
+      </div>
+      <hr />
+      <div>
+        <p>Thursday</p>
+        <p>9:30 am - 6:00 pm</p>
+      </div>
+      <hr />
+      <div>
+        <p>Friday</p>
+        <p>9:30 am - 6:00 pm</p>
+      </div>
+      <hr />
+      <div>
+        <p>Saturday</p>
+        <p class="closed">Closed</p>
+      </div>
+      <hr />
+      <div>
+        <p>Sunday</p>
+        <p class="closed">Closed</p>
       </div>
     </div>
   </div>
 </div>
+<app-footer></app-footer>

@@ -11,6 +11,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatDivider } from '@angular/material/divider';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const MaterialComponents = [
   MatToolbarModule,
@@ -24,7 +25,8 @@ const MaterialComponents = [
   MatButtonToggleModule,
   MatCardModule,
   MatListModule,
-  MatDivider
+  MatDivider,
+  MatTabsModule
 ];
 @NgModule({
   imports: [MaterialComponents],

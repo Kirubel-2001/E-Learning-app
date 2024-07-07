@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './specific-course.component.css',
 })
 export class SpecificCourseComponent {
-  selectedContent: string = 'description';
-
-  showContent(content: string) {
-    this.selectedContent = content;
-  }
+  
 }
