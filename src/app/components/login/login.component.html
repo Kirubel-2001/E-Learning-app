@@ -17,7 +17,7 @@
         <div class="remember-me">
           <input type="checkbox" id="remember" />
           <label for="remember" class="rem">Remember me</label>
-          <a href="#" class="lost-password"onclick="showLostPassword()">Lost Password</a>
+          <a href="#" class="lost-password">Lost Password</a>
         </div>
         <div class="form-group" id="lost-password-group" style="display: none;">
           <label for="login-email">LOGIN/E-MAIL</label>
@@ -28,7 +28,7 @@
       </form>
     </div>
     <div class="signup">
-      <h2>Sign Up</h2>
+      <h3>Sign Up</h3>
       <form>
         <div class="input-group-double">
           <div class="input-group">
@@ -63,7 +63,6 @@
     </div>
   </div>
 </div>
-<!-- Social share -->
 <div class="social-share">
   <button class="share-button facebook">
     <fa-icon [icon]="['fab', 'facebook']"></fa-icon>Share
@@ -81,9 +80,5 @@
     <fa-icon [icon]="['fab', 'telegram']"></fa-icon>Share
   </button>
 </div>
-<script>
-  function showLostPassword() {
-  document.getElementById('lost-password-group').style.display = 'block';
-}
-</script>
+
 <app-footer></app-footer>
