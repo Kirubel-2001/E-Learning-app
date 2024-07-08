@@ -17,8 +17,12 @@ const routes: Routes = [
   { path: 'contactus', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'courses', component: CoursesComponent },
+
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'specificcourse', component: SpecificCourseComponent },
+
+  { path: 'aboutus', component: AboutUsComponent },
+  { path: 'specific-course', component: SpecificCourseComponent },
 ];
 
 @NgModule({
