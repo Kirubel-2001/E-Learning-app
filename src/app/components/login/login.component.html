@@ -17,8 +17,13 @@
         <div class="remember-me">
           <input type="checkbox" id="remember" />
           <label for="remember" class="rem">Remember me</label>
-          <a href="#" class="lost-password">Lost Password</a>
+          <a href="#" class="lost-password"onclick="showLostPassword()">Lost Password</a>
         </div>
+        <div class="form-group" id="lost-password-group" style="display: none;">
+          <label for="login-email">LOGIN/E-MAIL</label>
+          <input type="text" id="login-email" placeholder="Enter login/e-mail">
+          <button class="btn btn-send">Send</button>
+      </div>
         <button type="submit" class="btn" id="login-btn">Login</button>
       </form>
     </div>
@@ -76,4 +81,9 @@
     <fa-icon [icon]="['fab', 'telegram']"></fa-icon>Share
   </button>
 </div>
+<script>
+  function showLostPassword() {
+  document.getElementById('lost-password-group').style.display = 'block';
+}
+</script>
 <app-footer></app-footer>
