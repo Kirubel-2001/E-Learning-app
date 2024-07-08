@@ -45,28 +45,124 @@ div {
   padding: 6px 1rem 0 1rem;
   margin-bottom: 2rem;
 }
-.column{
+.column {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
-.first-row, .second-row, .third-row, .fourth-row{
+.first-row,
+.second-row,
+.third-row,
+.fourth-row {
   display: flex;
   flex-direction: row;
   gap: 4rem;
 }
-.right .featured-courses .course1{
-    background-image: url('../../assets/home/staff-1.jpg');
-    background-size: 100% 130px;
-    background-repeat: no-repeat;
-    height: 130px;
-    width: 200px;
-    border: 1px solid rgb(22, 255, 22);
-    padding: 10rem 2rem 1rem 2rem;
-
+.right .featured-courses .course1 {
+  background-image: url("../../assets/home/staff-1.jpg");
+  background-size: 100% 130px;
+  background-repeat: no-repeat;
+  height: 130px;
+  width: 200px;
+  border: 1px solid rgb(22, 255, 22);
+  padding: 10rem 2rem 1rem 2rem;
 }
-.right .featured-courses .course1 div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.right .featured-courses .course1 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: -3rem;
+  left: -2.5rem;
+  right: -2.5rem;
+  bottom: -5rem;
+  height: 150%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: white;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none; /*makes the cursor not to go out of containers width*/
+}
+.container:hover .overlay,
+.overlay:hover {
+  opacity: 1;
+  pointer-events: all; /*makes the cursor not to go out of containers width*/
+}
+.overlay .overlay-content {
+  display: flex;
+}
+.overlay .overlay-content .icon-spacer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.overlay .overlay-content .course-name {
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+}
+.overlay .overlay-content .font-size {
+  font-weight: 300;
+  text-align: left;
+  padding: 0 2rem;
+}
+/* Social share */
+.social-share {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10rem;
+}
+.social-share fa-icon {
+  padding-right: 1rem;
+  font-size: 20px;
+}
+.share-button {
+  margin: 0 5px;
+  padding: 5px 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.pinterest {
+  background-color: #bd081c;
+  color: #fff;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.telegram {
+  background-color: #0088cc;
+  color: #fff;
 }

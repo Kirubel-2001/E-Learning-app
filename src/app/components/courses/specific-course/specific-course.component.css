@@ -1,0 +1,179 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+  box-sizing: border-box;
+}
+.small-opacity {
+  font-size: 14px;
+  opacity: 0.5;
+}
+mat-tab-group {
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+.course {
+  display: flex;
+  padding: 4rem 0 0 8rem;
+}
+/* left */
+.left {
+  width: 68%;
+}
+/* description */
+.left .right-header .course-description {
+  display: flex;
+  gap: 5rem;
+  line-height: 7px;
+}
+.left .course-description .teacher {
+  display: flex;
+  flex-direction: column;
+}
+.left .course-description fa-icon {
+  font-size: 28px;
+  color: blue;
+}
+.left .course-description .category {
+  display: flex;
+  gap: 1.5rem;
+}
+.left .description-content {
+  background-image: url("../../../assets/home/environment.webp");
+  background-size: 700px 393px;
+  background-repeat: no-repeat;
+  margin-top: 3rem;
+  padding-top: 28rem;
+  
+}
+/* curriculum */
+.left .curriculum-content {
+  margin-top: 3rem;
+}
+.left .curriculum-content .chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.left .curriculum-content .list {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f4fa;
+  padding: 1rem 1rem;
+}
+.list:hover {
+  color: blue;
+}
+.left .list fa-icon {
+  font-size: medium;
+}
+.left .list .file {
+  color: green;
+}
+.left .list .play {
+  color: orange;
+}
+.left .curriculum-content .list-left {
+  display: flex;
+  gap: 1rem;
+}
+.left .curriculum-content .list-right {
+  display: flex;
+  gap: 5px;
+}
+.left .list-right button {
+  border-radius: 5px;
+  background-color: #17d292;
+  color: white;
+  height: 1.8rem;
+  width: 3rem;
+  margin-left: 1rem;
+}
+/* reviews */
+.left .reviews-content {
+  margin-top: 3rem;
+}
+/* right */
+.right {
+  width: 18%;
+}
+.right .wishlist {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+.right .wishlist fa-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #000;
+  border-radius: 50%;
+  color: red;
+}
+.right .get-course-btn {
+  border-radius: 7px;
+  font-size: 17px;
+  color: white;
+  background-color: #17d292;
+  height: 3.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 16px;
+  margin-bottom: 2rem;
+}
+.right .course-info div {
+  display: flex;
+  justify-content: space-between;
+}
+.right .course-info fa-icon {
+  color: rgb(8, 8, 101);
+  font-size: larger;
+}
+.right .suggestion {
+  border-radius: 0;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+}
+mat-card-header {
+  padding-right: 0;
+}
+.right .suggestion .image {
+  background-image: url("../../../assets/home/environment.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+.right .suggestion button {
+  border-radius: 3px;
+  width: 13px;
+  height: 22px;
+  background-color: #17d23d;
+  color: white;
+  margin-left: 4.5rem;
+}
+/* working hours */
+.right .working-hours {
+  display: flex;
+  flex-direction: column;
+}
+.right .working-hours b {
+  padding-bottom: 2rem;
+}
+.right .working-hours div {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1rem;
+}
+.right .working-hours hr {
+  width: 100%;
+  border: 1px dotted;
+}
+.right .working-hours .closed {
+  background-color: red;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
