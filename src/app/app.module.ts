@@ -18,9 +18,10 @@ import { SecondHeaderComponent } from './components/second-header/second-header.
 import { CoursesComponent } from './components/courses/courses.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SpecificCourseComponent } from './components/courses/specific-course/specific-course.component';
+import { LessonComponent } from './components/courses/lesson/lesson.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, ContactUsComponent, AboutUsComponent,FooterComponent, SecondHeaderComponent, LoginComponent,CoursesComponent, SpecificCourseComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ContactUsComponent, AboutUsComponent,FooterComponent, SecondHeaderComponent, LoginComponent,CoursesComponent, SpecificCourseComponent, LessonComponent],
 
   imports: [
     BrowserModule,
