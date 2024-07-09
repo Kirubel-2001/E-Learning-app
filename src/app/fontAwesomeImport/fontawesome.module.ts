@@ -30,6 +30,7 @@ import {
   faHeart,
   faCirclePlay,
   faFile,
+  faThumbsUp
 } from '@fortawesome/free-regular-svg-icons';
 import {
   faFacebook,
@@ -74,7 +75,8 @@ export class FontAwesomeImportModule {
       faUsers,
       faBullhorn,
       faStairs,
-      faPlay
+      faPlay,
+      faThumbsUp
     );
   }
 }

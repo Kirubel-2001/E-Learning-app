@@ -1,20 +1,61 @@
 <app-header></app-header>
 <app-second-header></app-second-header>
 <div class="container">
-  <div class="logo"></div>
-  <h2>Contact Us</h2>
-  <form>
-    <div class="input-group">
-      <input type="text" id="name1" placeholder="Your Name" required />
-      <input type="email" id="email1" placeholder="Your Email" required />
-    </div>
-    <textarea
-      rows="16;"
-      id="txtarea"
-      placeholder="Your Message"
-      required
-    ></textarea>
-    <button type="submit">Submit</button>
-  </form>
+  <div class="content-left">
+    <header>
+      <h2>Welcome to Creavers!</h2>
+      <p>
+        We provide long standing experience for online teaching and learning by
+        highly experienced instructors, for students who want to deepen their
+        knowledge.
+      </p>
+      <p>
+        School is live 24 hours everyday with full tutoring, refresher courses
+        for those in need. Online quizzes and exams. Pursue your academic and
+        professional goals by taking online courses on a schedule that fits your
+        convenience.
+      </p>
+    </header>
+
+    <section class="why-choose-us">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>
+          <fa-icon [icon]="['far', 'thumbs-up']"></fa-icon>&nbsp; Get organized
+          and stay organized
+        </li>
+        <li>
+          <fa-icon [icon]="['far', 'thumbs-up']"></fa-icon>&nbsp; Online
+          Certificates which can be used worldwide.
+        </li>
+        <li>
+          <fa-icon [icon]="['far', 'thumbs-up']"></fa-icon>&nbsp; 24×7 Service
+        </li>
+        <li id="hi">
+          <fa-icon [icon]="['far', 'thumbs-up']"></fa-icon>&nbsp; Result
+          Oriented Lessons
+        </li>
+      </ul>
+    </section>
+
+    <div class="illustration"></div>
+  </div>
+
+  <div class="content-right">
+    <div class="logo"></div>
+
+    <section class="contact-us">
+      <hr />
+      <h2>Contact Us</h2>
+      <form>
+        <div class="form-row">
+          <input type="text" id="yourname1" placeholder="Your Name" />
+          <input type="email" id="youremail1" placeholder="Your Email" />
+        </div>
+        <textarea placeholder="Your Message" rows="10"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </div>
 </div>
 <app-footer></app-footer>

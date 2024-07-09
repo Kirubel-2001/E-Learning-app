@@ -10,17 +10,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SecondHeaderComponent } from './components/second-header/second-header.component';
 import { SpecificCourseComponent } from './components/courses/specific-course/specific-course.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'contactus', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'courses', component: CoursesComponent },
-
-  { path: 'aboutus', component: AboutUsComponent },
-  { path: 'specificcourse', component: SpecificCourseComponent },
-
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'specific-course', component: SpecificCourseComponent },
 ];
