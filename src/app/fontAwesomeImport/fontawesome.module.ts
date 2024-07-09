@@ -23,6 +23,10 @@ import {
   faBullhorn,
   faStairs,
   faPlay,
+  faArrowLeft,
+  faX,
+  faDownload,
+  faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faClock as farClock } from '@fortawesome/free-regular-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
@@ -30,6 +34,10 @@ import {
   faHeart,
   faCirclePlay,
   faFile,
+  faMoon,
+  faSun,
+  faCircleQuestion,
+  faFilePdf
   faThumbsUp
 } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -76,6 +84,14 @@ export class FontAwesomeImportModule {
       faBullhorn,
       faStairs,
       faPlay,
+      faArrowLeft,
+      faX,
+      faMoon,
+      faSun,
+      faCircleQuestion,
+      faFilePdf,
+      faDownload,
+      faAngleRight,
       faThumbsUp
     );
   }
