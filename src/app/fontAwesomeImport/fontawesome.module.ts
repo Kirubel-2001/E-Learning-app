@@ -37,7 +37,7 @@ import {
   faMoon,
   faSun,
   faCircleQuestion,
-  faFilePdf
+  faFilePdf,
   faThumbsUp
 } from '@fortawesome/free-regular-svg-icons';
 import {
