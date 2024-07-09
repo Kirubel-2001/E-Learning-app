@@ -38,6 +38,7 @@ import {
   faSun,
   faCircleQuestion,
   faFilePdf
+  faThumbsUp
 } from '@fortawesome/free-regular-svg-icons';
 import {
   faFacebook,
@@ -90,7 +91,8 @@ export class FontAwesomeImportModule {
       faCircleQuestion,
       faFilePdf,
       faDownload,
-      faAngleRight
+      faAngleRight,
+      faThumbsUp
     );
   }
 }

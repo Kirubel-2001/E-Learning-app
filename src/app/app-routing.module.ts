@@ -8,7 +8,6 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SpecificCourseComponent } from './components/courses/specific-course/specific-course.component';
 import { LessonComponent } from './components/courses/lesson/lesson.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -16,7 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'aboutus', component: AboutUsComponent },
-  { path: 'specificcourse', component: SpecificCourseComponent },
+  { path: 'specific-course', component: SpecificCourseComponent },
   { path: 'lesson', component: LessonComponent },
 ];
 

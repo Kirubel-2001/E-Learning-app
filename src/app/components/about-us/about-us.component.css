@@ -1,81 +1,177 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
 }
 
-.container {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 90%;
+.content-left,
+.content-right {
+  flex: 1;
+}
+
+.content-left {
+  margin-right: 20px;
+}
+
+header {
+  text-align: left;
+  margin: 20px 0;
 }
 
 .logo {
+  width: 150px;
+  height: 150px;
   background-image: url("../../assets/home/creavers.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 150px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
-h2 {
+header h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-left: 20px;
+  line-height: 38px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+header p {
+  max-width: 600px;
+  margin: 10px auto;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-left: 20px;
+}
+
+.why-choose-us {
+  text-align: left;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+.why-choose-us h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-choose-us li {
   margin: 10px 0;
-}
-
-form {
+  font-size: 1em;
+  line-height: 1.5em;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.input-group {
+.why-choose-us i {
+  color: #333;
+  margin-right: 10px;
+}
+
+#hi {
+  margin-bottom: 70px;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  background-image: url("../../assets/home/environment.webp");
+  background-size: cover;
+  background-position: center;
+  margin: 20px 0;
+}
+
+.contact-us {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.contact-us hr {
+  border: 0;
+  height: 2px;
+  background-color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-us h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.contact-us form {
   display: flex;
-  width: 60%;
-  height: 80px;
+  flex-direction: column;
+}
+
+.contact-us .form-row {
+  display: flex;
   justify-content: space-between;
+  width: 90%;
+  margin-bottom: 20px;
 }
-#name1 {
-  background-color: #ccc;
+
+#yourname1 {
+  background: #f0f2f5;
+  margin-right: 20px;
+  border: none;
 }
-#email1 {
-  background-color: #ccc;
+
+#youremail1 {
+  background: #f0f2f5;
+  border: none;
 }
-input,
-textarea {
-  margin: 19px;
+
+#yourname1::placeholder {
+  padding-left: 20px;
+}
+
+#youremail1::placeholder {
+  padding-left: 20px;
+}
+
+.contact-us input,
+.contact-us textarea {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 10px 0;
   border: 1px solid #ccc;
-  background-color: #ccc;
+  border: none;
+  background: #f0f2f5;
 }
+
+.contact-us textarea {
+  width: 87.5%;
+}
+
 textarea::placeholder {
   padding-left: 20px;
 }
-input::placeholder {
-  padding-left: 20px;
-}
 
-input {
-  width: 48%;
-}
-#txtarea {
-  width: 57%;
-}
-
-button {
-  padding: 10px;
-  background-color: #003366;
+.contact-us button {
+  padding: 15px 20px;
+  background-color: #333;
   color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  width: 150px;
+  height: 50px;
+  align-self: self-start;
+  margin-top: 24px;
 }
 
-button:hover {
-  background-color: #0055a5;
+.contact-us button:hover {
+  background-color: #555;
+}
+fa-icon {
+  color: #eab830;
 }
