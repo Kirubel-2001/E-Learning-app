@@ -1,15 +1,37 @@
-<div class="container">
+<app-header></app-header>
+<app-second-header></app-second-header>
+<div class="container" style="position: relative">
+  <h1
+    style="
+      display: block;
+      font-size: 25px;
+      font-weight: 500;
+      position: absolute;
+      left: 150px;
+    "
+  >
+    Login
+  </h1>
   <div class="form-container">
     <div class="login">
-      <h2>Login</h2>
       <form>
         <div class="input-group">
           <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter username" />
+          <input
+            type="text"
+            class="fields"
+            id="username"
+            placeholder="Enter username"
+          />
         </div>
         <div class="input-group">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" />
+          <input
+            type="password"
+            class="fields"
+            id="password"
+            placeholder="Enter password"
+          />
         </div>
         <div class="remember-me">
           <input type="checkbox" id="remember" />
@@ -27,47 +49,62 @@
           id="lost-password-group"
           *ngIf="showLostPassword"
         >
-          <label for="login-email" class="loginemail1">LOGIN/E-MAIL</label
-          ><br /><br />
-          <input type="text" id="enter-email" placeholder="Enter Your E-mail" />
-          <button class="btn" id="btn-send">Send</button>
+          <label for="login-email" class="loginemail1">LOGIN/E-MAIL</label>
+          <div id="layout">
+            <input
+              type="text"
+              class="input1"
+              id="enter-email"
+              placeholder="Enter Your E-mail"
+            />
+            <button class="btn button1" id="btn-send">Send</button>
+          </div>
         </div>
       </form>
     </div>
-    <div class="signup">
-      <h3>Sign Up</h3>
-      <form>
-        <div class="input-group-double">
-          <div class="input-group">
-            <label for="new-username">Username</label>
-            <input type="text" id="new-username" placeholder="Enter username" />
-          </div>
-          <div class="input-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="Enter your E-mail" />
-          </div>
+    <h3
+      style="
+        display: block;
+        font-size: 25px;
+        font-weight: 500;
+        position: absolute;
+        top: 30px;
+        right: 510px;
+      "
+    >
+      Sign Up
+    </h3>
+    <form style="background: #eef1f7; height: 350px; padding: 40px">
+      <div class="input-group-double">
+        <div class="input-group">
+          <label for="new-username">Username</label>
+          <input type="text" id="new-username" placeholder="Enter username" />
         </div>
-        <div class="input-group-double">
-          <div class="input-group">
-            <label for="new-password">Password</label>
-            <input
-              type="password"
-              id="new-password"
-              placeholder="Enter password"
-            />
-          </div>
-          <div class="input-group">
-            <label for="confirm-password">Password Again</label>
-            <input
-              type="password"
-              id="confirm-password"
-              placeholder="Confirm password"
-            />
-          </div>
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="Enter your E-mail" />
         </div>
-        <button type="submit" class="btn">REGISTER</button>
-      </form>
-    </div>
+      </div>
+      <div class="input-group-double">
+        <div class="input-group">
+          <label for="new-password">Password</label>
+          <input
+            type="password"
+            id="new-password"
+            placeholder="Enter password"
+          />
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Password Again</label>
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm password"
+          />
+        </div>
+      </div>
+      <button type="submit" class="btn">REGISTER</button>
+    </form>
   </div>
 </div>
 <div class="social-share">
@@ -87,3 +124,4 @@
     <fa-icon [icon]="['fab', 'telegram']"></fa-icon>Share
   </button>
 </div>
+<app-footer></app-footer>

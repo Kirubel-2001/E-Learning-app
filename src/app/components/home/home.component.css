@@ -47,7 +47,9 @@
     letter-spacing: 5px;
     line-height: 6rem;
   }
-  /* top courses */
+  .nav-bar:hover{
+    color: #eab830;
+  }
 .course .top-courses{
   display: flex;
   justify-content: space-between;
