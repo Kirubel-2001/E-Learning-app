@@ -47,6 +47,9 @@
     letter-spacing: 5px;
     line-height: 6rem;
   }
+  .nav-bar{
+    transition: color 0.25s;
+  }
   .nav-bar:hover{
     color: #eab830;
   }

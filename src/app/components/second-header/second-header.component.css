@@ -2,6 +2,14 @@
   display: flex;
   margin-left: 40rem;
 }
+.nav-bar{
+  transition: all 0.25s;
+  color: #333;
+  font-family: Exo;
+}
+.nav-bar:hover{
+  color: #eab830;
+}
 .second-toolbar ul {
   display: flex;
   gap: 2rem;
@@ -11,7 +19,9 @@
 .second-toolbar li a {
   text-decoration: none;
   color: rgba(56, 56, 56, 0.932);
-  font-weight: 500;
+  font-family: Exo;
+  font-weight: 600;
+  font-size: medium;
   white-space: nowrap;
   font-size: medium;
 }
