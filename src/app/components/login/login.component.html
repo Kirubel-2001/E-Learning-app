@@ -1,6 +1,3 @@
-<app-header></app-header>
-<app-second-header></app-second-header>
-<br />
 <div class="container">
   <div class="form-container">
     <div class="login">
@@ -17,14 +14,24 @@
         <div class="remember-me">
           <input type="checkbox" id="remember" />
           <label for="remember" class="rem">Remember me</label>
-          <a href="#" class="lost-password">Lost Password</a>
+          <a
+            href="localhost:4200/login"
+            class="lost-password"
+            (click)="toggleLostPassword()"
+            >Lost Password</a
+          >
         </div>
-        <div class="form-group" id="lost-password-group" style="display: none;">
-          <label for="login-email">LOGIN/E-MAIL</label>
-          <input type="text" id="login-email" placeholder="Enter login/e-mail">
-          <button class="btn btn-send">Send</button>
-      </div>
         <button type="submit" class="btn" id="login-btn">Login</button>
+        <div
+          class="form-group"
+          id="lost-password-group"
+          *ngIf="showLostPassword"
+        >
+          <label for="login-email" class="loginemail1">LOGIN/E-MAIL</label
+          ><br /><br />
+          <input type="text" id="enter-email" placeholder="Enter Your E-mail" />
+          <button class="btn" id="btn-send">Send</button>
+        </div>
       </form>
     </div>
     <div class="signup">
@@ -80,5 +87,3 @@
     <fa-icon [icon]="['fab', 'telegram']"></fa-icon>Share
   </button>
 </div>
-
-<app-footer></app-footer>
