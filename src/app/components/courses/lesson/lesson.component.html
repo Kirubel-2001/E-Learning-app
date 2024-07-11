@@ -2,9 +2,9 @@
 <div class="header">
   <div class="header-left">
     <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
-        <button mat-button> 
-        <!-- (click)="toggleSidenav()" -->
-      <fa-icon [icon]="['fas', 'x']"></fa-icon>&nbsp;&nbsp; Curriculum
+    <button mat-button (click)="toggleSidenav()">
+       
+      <fa-icon [icon]="isSidenavOpen ? ['fas', 'x'] : ['fas', 'bars']"></fa-icon>&nbsp;&nbsp; Curriculum
     </button>
     <div class="title">
       <p class="small-opacity">Course:</p>
@@ -12,8 +12,20 @@
     </div>
   </div>
   <div class="header-middle">
-    <p>Lesson</p>
-    <p>Materials</p>
+    <p #scrollToLesson class="clickable-text" [class.clicked]="activeText === 'lesson'" 
+    [class.clicked]="activeText === 'lesson'" style="cursor: pointer" (click)="toggleActiveText('lesson')" (click)="scrollTo('#lesson')">
+      Lesson
+    </p>
+    <p
+      #scrollToMaterial
+      class="clickable-text" 
+      [class.clicked]="activeText === 'material'" 
+      (click)="toggleActiveText('material')"
+      style="cursor: pointer"
+      (click)="scrollTo('#material')"
+    >
+      Materials
+    </p>
   </div>
   <div class="header-right">
     <fa-icon [icon]="['far', 'sun']"></fa-icon>
@@ -23,19 +35,48 @@
 <!-- ------------------------------Left----------------------- -->
 <mat-sidenav-container class="left">
   <mat-sidenav opened #sidenav mode="side">
-    <p>Chapter One: Angular Fundamentals</p>
-    <mat-expansion-panel>
+    <b>Chapter One: Angular Fundamentals</b>
+    <mat-expansion-panel expanded>
       <mat-expansion-panel-header>
         <mat-panel-title>Seminar 1</mat-panel-title>
         <mat-panel-description>0/5</mat-panel-description>
       </mat-expansion-panel-header>
-      <div class="contetnt-column">
+      <div class="content-column">
         <div class="chapter-content">
-          <div class="containt">
+          <div class="content">
             <div class="list-left">
               <b>Introduction</b>
               <div class="icon-text">
-                <fa-icon [icon]="['far', 'file']"></fa-icon>
+                <fa-icon class="file-icon" [icon]="['far', 'file']"></fa-icon>
+                <p class="small-opacity">06:00 min</p>
+              </div>
+            </div>
+            <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
+          </div>
+        </div>
+        <hr />
+        <div class="chapter-content">
+          <div class="content">
+            <div class="list-left">
+              <b>Html</b>
+              <div class="icon-text">
+                <fa-icon class="play-icon" [icon]="['fas', 'play']"></fa-icon>
+                <p class="small-opacity">06:00 min</p>
+              </div>
+            </div>
+            <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
+          </div>
+        </div>
+        <hr />
+        <div class="chapter-content">
+          <div class="content">
+            <div class="list-left">
+              <b>Html</b>
+              <div class="icon-text">
+                <fa-icon
+                  class="question-icon"
+                  [icon]="['far', 'circle-question']"
+                ></fa-icon>
                 <p class="small-opacity">06:00 min</p>
               </div>
             </div>
@@ -46,16 +87,90 @@
     </mat-expansion-panel>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        <mat-panel-title>Seminar 1</mat-panel-title>
+        <mat-panel-title>Seminar 2</mat-panel-title>
         <mat-panel-description>0/3</mat-panel-description>
       </mat-expansion-panel-header>
-      <div class="contetnt-column">
+      <div class="content-column">
         <div class="chapter-content">
-          <div class="containt">
+          <div class="content">
             <div class="list-left">
               <b>Introduction</b>
               <div class="icon-text">
-                <fa-icon [icon]="['far', 'file']"></fa-icon>
+                <fa-icon class="file-icon" [icon]="['far', 'file']"></fa-icon>
+                <p class="small-opacity">06:00 min</p>
+              </div>
+            </div>
+            <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
+          </div>
+        </div>
+        <div class="chapter-content">
+          <div class="content">
+            <div class="list-left">
+              <b>Html</b>
+              <div class="icon-text">
+                <fa-icon class="play-icon" [icon]="['fas', 'play']"></fa-icon>
+                <p class="small-opacity">06:00 min</p>
+              </div>
+            </div>
+            <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
+          </div>
+        </div>
+        <div class="chapter-content">
+          <div class="content">
+            <div class="list-left">
+              <b>Html</b>
+              <div class="icon-text">
+                <fa-icon
+                  class="question-icon"
+                  [icon]="['far', 'circle-question']"
+                ></fa-icon>
+                <p class="small-opacity">06:00 min</p>
+              </div>
+            </div>
+            <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Seminar 3</mat-panel-title>
+        <mat-panel-description>0/4</mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="content-column">
+        <div class="chapter-content">
+          <div class="content">
+            <div class="list-left">
+              <b>Introduction</b>
+              <div class="icon-text">
+                <fa-icon class="file-icon" [icon]="['far', 'file']"></fa-icon>
+                <p class="small-opacity">06:00 min</p>
+              </div>
+            </div>
+            <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
+          </div>
+        </div>
+        <div class="chapter-content">
+          <div class="content">
+            <div class="list-left">
+              <b>Html</b>
+              <div class="icon-text">
+                <fa-icon class="play-icon" [icon]="['fas', 'play']"></fa-icon>
+                <p class="small-opacity">06:00 min</p>
+              </div>
+            </div>
+            <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
+          </div>
+        </div>
+        <div class="chapter-content">
+          <div class="content">
+            <div class="list-left">
+              <b>Html</b>
+              <div class="icon-text">
+                <fa-icon
+                  class="question-icon"
+                  [icon]="['far', 'circle-question']"
+                ></fa-icon>
                 <p class="small-opacity">06:00 min</p>
               </div>
             </div>
@@ -66,91 +181,98 @@
     </mat-expansion-panel>
   </mat-sidenav>
 
-<!-- -----------------------------------Right----------------------- -->
-<div class="right">
-  <div class="right-content">
-    <div class="content-title">
-      <p class="small-opacity">Text lesson</p>
-      <p>Introduction</p>
-    </div>
-    <div class="content-subtitle medium-opacity">Welcome to this course</div>
-    <div class="paragraph">
-      <p>
-        We are delighted to be a part of your continuing education. This course
-        will provide you with a variety of tools and learning opportunities, to
-        include video lectures, readings, assessments, peer reviews, and an
-        opportunity to contribute to the Goodgradestudent learning community in
-        the discussion forums.
-      </p>
-      <p>
-        In each of the lesson sections, you’ll find learning objectives, lecture
-        videos, readings, activities, and an opportunity to test your knowledge
-        in quiz format. In some of the module sections you’ll also work on
-        assignments and grade the work of your peers. A peer-review assignment,
-        is one where you and your fellow learners have an opportunity to review
-        and grade each other’s work. We’ll dive more into peer reviews later on
-        in this course.
-      </p>
-      <p>
-        When navigating the course, you can find available course resources
-        under each of the lecture videos in a section labeled “Downloads” – here
-        you can download the lecture video, view transcripts, PDFs of the
-        lecture slides, and find additional readings or files.
-      </p>
-      <p>
-        If you run into any issues during this course, learner support is
-        available to all Goodgradestudent students. The link for
-        Goodgradestudent’s Learner support is included below. The Help
-        Center/Learner Support includes topics such as account setup, payments,
-        enrollment questions, and troubleshooting common problems.
-      </p>
-      <p>
-        If you find any content issues, be sure to let the course staff know by
-        flagging the lecture, assignment, reading, or quiz and this will inform
-        us of where these issues occur. Here is the link for more information on
-        how to Flag an Issue – it is also listed below.
-      </p>
-      <p>
-        One of the great things about Goodgradestudent courses is that they are
-        self-paced. The course dates are based on the average time it takes to
-        complete a course. However, if you need additional time to complete a
-        course you can reset your deadlines with no penalties. More information
-        on resetting deadlines can be found here: Assignment Deadlines
-      </p>
-      <p>
-        Need additional help during your course session? Be sure to utilize the
-        discussion forums and interact with your fellow peers. In this area, you
-        can ask questions or search for similar issues that have already been
-        posted in the forums. Learner support is also a great place to find
-        answers, but specific course content questions can typically be found
-        and answered in the discussion forums. This is also a great place to
-        post your assignment if additional peer reviews are needed. Here is a
-        link with more information on the discussion forums: Discussion Forums
-      </p>
-      <p>We look forward to having you in this course. Happy learning!</p>
-    </div>
-    <b>Lesson materials</b>
-    <mat-card appearance="outlined" class="download">
-      <mat-card-content>
-        <fa-icon [icon]="['far', 'file-pdf']"></fa-icon>&nbsp;&nbsp;
-        <span>Course Overview.pdf</span>
-        <div class="card-right">
-          <span class="small-opacity">528 kb</span>&nbsp;&nbsp;
-          <a href="#"
-            ><fa-icon [icon]="['fas', 'download']"></fa-icon>&nbsp;Download</a
-          >
+  <!-- -----------------------------------Right----------------------- -->
+  <mat-sidenav-content>
+    <div class="right">
+      <div class="right-content">
+        <div class="content-title">
+          <p class="small-opacity" id="lesson">Text lesson</p>
+          <h6><b>Introduction to HTML</b></h6>
         </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div class="right-footer">
-    <div class="next-button">
-      <button mat-raised-button>
-        Complete & Next &nbsp;&nbsp;<span
-          ><fa-icon [icon]="['fas', 'angle-right']"></fa-icon
-        ></span>
-      </button>
+        <div class="content-subtitle">Welcome to this course!</div>
+        <div>
+          <p>
+            We are delighted to be a part of your continuing education. This
+            course will provide you with a variety of tools and learning
+            opportunities, to include video lectures, readings, assessments,
+            peer reviews, and an opportunity to contribute to the
+            Goodgradestudent learning community in the discussion forums.
+          </p>
+          <p>
+            In each of the lesson sections, you’ll find learning objectives,
+            lecture videos, readings, activities, and an opportunity to test
+            your knowledge in quiz format. In some of the module sections you’ll
+            also work on assignments and grade the work of your peers. A
+            peer-review assignment, is one where you and your fellow learners
+            have an opportunity to review and grade each other’s work. We’ll
+            dive more into peer reviews later on in this course.
+          </p>
+          <p>
+            When navigating the course, you can find available course resources
+            under each of the lecture videos in a section labeled “Downloads” –
+            here you can download the lecture video, view transcripts, PDFs of
+            the lecture slides, and find additional readings or files.
+          </p>
+          <p>
+            If you run into any issues during this course, learner support is
+            available to all Goodgradestudent students. The link for
+            Goodgradestudent’s Learner support is included below. The Help
+            Center/Learner Support includes topics such as account setup,
+            payments, enrollment questions, and troubleshooting common problems.
+          </p>
+          <p>
+            If you find any content issues, be sure to let the course staff know
+            by flagging the lecture, assignment, reading, or quiz and this will
+            inform us of where these issues occur. Here is the link for more
+            information on how to Flag an Issue – it is also listed below.
+          </p>
+          <p>
+            One of the great things about Goodgradestudent courses is that they
+            are self-paced. The course dates are based on the average time it
+            takes to complete a course. However, if you need additional time to
+            complete a course you can reset your deadlines with no penalties.
+            More information on resetting deadlines can be found here:
+            Assignment Deadlines
+          </p>
+          <p>
+            Need additional help during your course session? Be sure to utilize
+            the discussion forums and interact with your fellow peers. In this
+            area, you can ask questions or search for similar issues that have
+            already been posted in the forums. Learner support is also a great
+            place to find answers, but specific course content questions can
+            typically be found and answered in the discussion forums. This is
+            also a great place to post your assignment if additional peer
+            reviews are needed. Here is a link with more information on the
+            discussion forums: Discussion Forums
+          </p>
+          <p>We look forward to having you in this course. Happy learning!</p>
+        </div>
+        <h6><b>Lesson materials</b></h6>
+        <mat-card appearance="outlined" id="material" class="download">
+          <mat-card-content>
+            <div class="card-left">
+              <fa-icon [icon]="['far', 'file-pdf']"></fa-icon>&nbsp;&nbsp;
+              <p>Course Overview.pdf</p>
+            </div>
+            <div class="card-right">
+              <b class="small-opacity">528 kb</b>&nbsp;&nbsp;
+              <a href="#"
+                ><fa-icon [icon]="['fas', 'download']"></fa-icon
+                >&nbsp;Download</a
+              >
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="sticky-footer">
+        <div class="right-footer">
+          <button mat-raised-button color="primary">
+            Complete & Next &nbsp;&nbsp;<span
+              ><fa-icon [icon]="['fas', 'angle-right']"></fa-icon
+            ></span>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
