@@ -27,7 +27,6 @@
     display: block;
     bottom: 0.6rem;
     color: white;
-    border: solid;
   }
   /*heading*/
 
@@ -52,6 +51,20 @@
   }
   .nav-bar:hover{
     color: #eab830;
+  }
+  .search-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .search-icon:hover{
+    color: orange;
+    background: none;
+    transition: left 0.5s ease;
+    
   }
 .course .top-courses{
   display: flex;
