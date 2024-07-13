@@ -96,6 +96,9 @@ mat-tab-group {
 .right {
   width: 18%;
 }
+.wishlisticon{
+   cursor: pointer;
+}
 .right .wishlist {
   display: flex;
   align-items: center;
