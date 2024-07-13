@@ -83,7 +83,9 @@
                 <div class="list-right">
                   <fa-icon [icon]="['far', 'clock']"></fa-icon>
                   <p>10:00 min</p>
-                  <button mat-raised-button>Preview</button>
+                  <button mat-raised-button [routerLink]="'/lesson'">
+                    Preview
+                  </button>
                 </div>
               </div>
               <div class="list">
@@ -154,7 +156,9 @@
                 <div class="list-right">
                   <fa-icon [icon]="['far', 'clock']"></fa-icon>
                   <p>10:00 min</p>
-                  <button mat-raised-button>Preview</button>
+                  <button mat-raised-button [routerLink]="'/lesson'">
+                    Preview
+                  </button>
                 </div>
               </div>
               <div class="list">
@@ -204,7 +208,9 @@
       <span class="wishlisticon"><fa-icon [icon]="['far', 'heart']"></fa-icon></span>
       <p>Add to wishlist</p>
     </div>
-    <button mat-raised-button class="get-course-btn">GET COURSE</button>
+    <button mat-raised-button class="get-course-btn" [routerLink]="'/lesson'">
+      GET COURSE
+    </button>
     <div class="course-info">
       <div>
         <p>Enrolled: <b>2 students</b></p>
@@ -239,7 +245,7 @@
           >BY Yared Ekubay</mat-card-subtitle
         >
       </mat-card-header>
-      <button mat-raised-button>Free</button>
+      <button mat-raised-button [routerLink]="'/lesson'">Free</button>
       <mat-card-header>
         <div mat-card-avatar class="image"></div>
         <mat-card-title>HTML</mat-card-title>
@@ -247,7 +253,7 @@
           >BY Kirubel Tesfaw</mat-card-subtitle
         >
       </mat-card-header>
-      <button mat-raised-button>Free</button>
+      <button mat-raised-button [routerLink]="'/lesson'">Free</button>
       <mat-card-header>
         <div mat-card-avatar class="image"></div>
         <mat-card-title>HTML</mat-card-title>
@@ -255,7 +261,7 @@
           >BY BEAKAL ZELEALEM</mat-card-subtitle
         >
       </mat-card-header>
-      <button mat-raised-button>Free</button>
+      <button mat-raised-button [routerLink]="'/lesson'">Free</button>
     </mat-card>
     <hr />
     <div class="working-hours">
