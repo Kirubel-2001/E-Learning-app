@@ -1,10 +1,14 @@
 <!-- -----------------------Header-------------------------- -->
 <div class="header">
   <div class="header-left">
-    <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
+    <fa-icon
+      style="cursor: pointer"
+      [icon]="['fas', 'arrow-left']"
+      [routerLink]="'/specific-course'"
+    ></fa-icon>
     <button mat-button (click)="toggleSidenav()">
-       
-      <fa-icon [icon]="isSidenavOpen ? ['fas', 'x'] : ['fas', 'bars']"></fa-icon>&nbsp;&nbsp; Curriculum
+      <fa-icon [icon]="isSidenavOpen ? ['fas', 'bars'] : ['fas', 'x']"></fa-icon
+      >&nbsp;&nbsp; Curriculum
     </button>
     <div class="title">
       <p class="small-opacity">Course:</p>
@@ -12,14 +16,21 @@
     </div>
   </div>
   <div class="header-middle">
-    <p #scrollToLesson class="clickable-text" [class.clicked]="activeText === 'lesson'" 
-    [class.clicked]="activeText === 'lesson'" style="cursor: pointer" (click)="toggleActiveText('lesson')" (click)="scrollTo('#lesson')">
+    <p
+      #scrollToLesson
+      class="clickable-text"
+      [class.clicked]="activeText === 'lesson'"
+      [class.clicked]="activeText === 'lesson'"
+      style="cursor: pointer"
+      (click)="toggleActiveText('lesson')"
+      (click)="scrollTo('#lesson')"
+    >
       Lesson
     </p>
     <p
       #scrollToMaterial
-      class="clickable-text" 
-      [class.clicked]="activeText === 'material'" 
+      class="clickable-text"
+      [class.clicked]="activeText === 'material'"
       (click)="toggleActiveText('material')"
       style="cursor: pointer"
       (click)="scrollTo('#material')"
@@ -42,7 +53,7 @@
         <mat-panel-description>0/5</mat-panel-description>
       </mat-expansion-panel-header>
       <div class="content-column">
-        <div class="chapter-content">
+        <div class="chapter-content" (click)="showDiv('introduction')">
           <div class="content">
             <div class="list-left">
               <b>Introduction</b>
@@ -55,7 +66,7 @@
           </div>
         </div>
         <hr />
-        <div class="chapter-content">
+        <div class="chapter-content" (click)="showDiv('video')">
           <div class="content">
             <div class="list-left">
               <b>Html</b>
@@ -68,7 +79,7 @@
           </div>
         </div>
         <hr />
-        <div class="chapter-content">
+        <div class="chapter-content" (click)="showDiv('question')">
           <div class="content">
             <div class="list-left">
               <b>Html</b>
@@ -91,10 +102,10 @@
         <mat-panel-description>0/3</mat-panel-description>
       </mat-expansion-panel-header>
       <div class="content-column">
-        <div class="chapter-content">
+        <div class="chapter-content" (click)="showDiv('advanced')">
           <div class="content">
             <div class="list-left">
-              <b>Introduction</b>
+              <b>Advanced</b>
               <div class="icon-text">
                 <fa-icon class="file-icon" [icon]="['far', 'file']"></fa-icon>
                 <p class="small-opacity">06:00 min</p>
@@ -103,7 +114,7 @@
             <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
           </div>
         </div>
-        <div class="chapter-content">
+        <div class="chapter-content" (click)="showDiv('video')">
           <div class="content">
             <div class="list-left">
               <b>Html</b>
@@ -115,7 +126,7 @@
             <mat-icon class="circle-border">radio_button_unchecked</mat-icon>
           </div>
         </div>
-        <div class="chapter-content">
+        <div class="chapter-content" (click)="showDiv('question')">
           <div class="content">
             <div class="list-left">
               <b>Html</b>
@@ -182,7 +193,7 @@
   </mat-sidenav>
 
   <!-- -----------------------------------Right----------------------- -->
-  <mat-sidenav-content>
+  <mat-sidenav-content *ngIf="currentDiv === 'introduction'">
     <div class="right">
       <div class="right-content">
         <div class="content-title">
@@ -195,8 +206,8 @@
             We are delighted to be a part of your continuing education. This
             course will provide you with a variety of tools and learning
             opportunities, to include video lectures, readings, assessments,
-            peer reviews, and an opportunity to contribute to the
-            Goodgradestudent learning community in the discussion forums.
+            peer reviews, and an opportunity to contribute to the Good grade
+            student learning community in the discussion forums.
           </p>
           <p>
             In each of the lesson sections, you’ll find learning objectives,
@@ -215,7 +226,7 @@
           </p>
           <p>
             If you run into any issues during this course, learner support is
-            available to all Goodgradestudent students. The link for
+            available to all Good grade student students. The link for
             Goodgradestudent’s Learner support is included below. The Help
             Center/Learner Support includes topics such as account setup,
             payments, enrollment questions, and troubleshooting common problems.
@@ -263,6 +274,62 @@
             </div>
           </mat-card-content>
         </mat-card>
+      </div>
+      <div class="sticky-footer">
+        <div class="right-footer">
+          <button mat-raised-button color="primary">
+            Complete & Next &nbsp;&nbsp;<span
+              ><fa-icon [icon]="['fas', 'angle-right']"></fa-icon
+            ></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+  <mat-sidenav-content *ngIf="currentDiv === 'video'">
+    <div class="right">
+      <div class="right-content">
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ly36kn0ug4k?si=t7nhq0tlsX2JvnQv"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="sticky-footer">
+        <div class="right-footer">
+          <button mat-raised-button color="primary">
+            Complete & Next &nbsp;&nbsp;<span
+              ><fa-icon [icon]="['fas', 'angle-right']"></fa-icon
+            ></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+  <mat-sidenav-content *ngIf="currentDiv === 'question'">
+    <div class="right">
+      <div class="right-content">
+        <div class="content-title">
+          <p class="small-opacity" id="lesson">Text lesson</p>
+          <h6><b>Introduction to Css</b></h6>
+        </div>
+        <div class="content-subtitle">Welcome to this course!</div>
+        <div>
+          <p>
+            We are delighted to be a part of your continuing education. This
+            course will provide you with a variety of tools and learning
+            opportunities, to include video lectures, readings, assessments,
+            peer reviews, and an opportunity to contribute to the Good grade
+            student learning community in the discussion forums.
+          </p>
+        </div>
       </div>
       <div class="sticky-footer">
         <div class="right-footer">

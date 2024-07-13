@@ -83,13 +83,14 @@ mat-panel-description {
   font-weight: 500;
   opacity: 0.7;
 }
-/* -------------------------------left--------------------------------------- */
-.left {
-  /* background-color: rgb(154, 154, 199); */
+.clickable-text.clicked {
+  color: #227aff; /*Changes color when the text is clicked*/
 }
+/* -------------------------------left--------------------------------------- */
 .left .content-column {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .left .content-column .content {
   display: flex;
@@ -112,7 +113,7 @@ mat-panel-description {
 .right-content {
   display: flex;
   flex-direction: column;
-  margin: 0 17rem;
+  margin: 0 15rem;
 }
 .right-content .content-title {
   padding-bottom: 2rem;
@@ -166,11 +167,15 @@ mat-panel-description {
   border-radius: 5px;
 }
 
+/* Video */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-
-
-/* bbbbbbbbbbbbbbbbbb */
-
-.clickable-text.clicked {
-    color: #227aff;
-  }
+iframe {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}

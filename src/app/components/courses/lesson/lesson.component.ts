@@ -49,4 +49,10 @@ export class LessonComponent {
       this.activeText = text; // Set active text to the clicked text
     }
   }
+// change navbar view
+currentDiv: string = 'introduction'; // Initialize with the default div to display
+
+showDiv(divName: string) {
+  this.currentDiv = divName;
+}
 }
