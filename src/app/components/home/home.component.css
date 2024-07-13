@@ -47,6 +47,7 @@
     line-height: 6rem;
   }
   .nav-bar{
+    font-family: Arial, Helvetica, sans-serif;
     transition: color 0.25s;
   }
   .nav-bar:hover{
